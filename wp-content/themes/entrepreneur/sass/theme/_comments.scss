@@ -1,0 +1,71 @@
+.comment-content {
+  overflow: hidden;
+  p:first-child {
+    margin-top: 0;
+  }
+}
+
+.comment-list {
+  padding: 0;
+  li {
+    list-style: none;
+  }
+  .comment-body {
+    padding: 2.375em;
+    margin-bottom: 1.75em;
+    //border: 1px solid $gray-dark;
+  }
+  .children {
+    padding-left: 1.9em;
+  }
+  .vcard {
+    float: left;
+    margin-right: 1.500em;
+  }
+  .comment-meta {
+    overflow: hidden;
+    line-height: 2.875em;
+    @include meta-style();
+    span {
+      text-transform: none;
+      margin-right: 1.5em;
+    }
+  }
+  .comment-reply-link {
+    display: inline-block;
+    font-weight: $btn-font-weight;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    border: 2px solid $brand-second;
+    white-space: nowrap;
+    @include button-size(0.625em, 1.750em, $font-size-base, $line-height-base, $btn-border-radius-base);
+    @include user-select(none);
+    text-transform: uppercase;
+    color: $brand-second;
+    background: transparent;
+    @include transition(background 0.3s ease,color 0.3s ease);
+    min-width: 124px;
+    &:hover,
+    &:focus,
+    &.focus {
+      text-decoration: none;
+    }
+    &:hover {
+      color:#ffffff;
+      background: $brand-second;
+    }
+  }
+}
+
+.comment-navigation {
+  .nav-previous,
+  .nav-next {
+    display: inline-block;
+
+  }
+}
+.comments-area{
+  margin-bottom: 4em;
+}

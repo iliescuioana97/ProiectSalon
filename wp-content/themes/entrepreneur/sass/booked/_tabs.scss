@@ -1,0 +1,101 @@
+body #booked-profile-page .booked-tabs li a {
+  font-size: 1em;
+  line-height: 1.5;
+  padding-left: 0;
+}
+
+body #booked-profile-page .booked-tabs {
+  background: $gray-light !important;
+  border: 0px solid;
+}
+
+body #booked-profile-page .booked-tabs li a,
+body #booked-profile-page .booked-counts, body #booked-profile-page .booked-tabs li.active a, body #booked-profile-page .booked-tabs li.active a:hover {
+  color: $brand-second;
+}
+
+body #booked-profile-page .booked-tabs li.active a {
+  border-left: 1px solid $gray-dark;
+  border-right: 1px solid $gray-dark;
+  border-bottom: 1px solid $gray-dark;
+  &, &:hover {
+    background: #ffffff !important;
+  }
+}
+
+body #booked-profile-page .booked-tabs li {
+  margin-right: -1px;
+  &.edit-button {
+    margin-right: 0px;
+  }
+}
+
+body #booked-profile-page .booked-tabs li a {
+  padding: 1.250em;
+  background: transparent;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  &:hover {
+    border-left: 1px solid $gray-dark;
+    border-right: 1px solid $gray-dark;
+    border-bottom: 1px solid $gray-dark;
+    background: #ffffff;
+    color: $brand-second;
+  }
+}
+
+body #booked-profile-page .booked-tabs li.edit-button a {
+  background: #e6e6e6;
+  border-color: #e6e6e6;
+  &:hover {
+    border-color: $gray-dark;
+    background: #ffffff;
+    color: $brand-second;
+  }
+}
+
+body #booked-profile-page .booked-tab-content {
+  padding: 1.875em 0;
+  border: 0px solid;
+}
+
+body #booked-profile-page h4 {
+  font-size: 1.5em;
+  text-transform: none;
+  font-weight: 400;
+  margin: 0 0 1.250em;
+}
+
+body #booked-profile-page .booked-profile-appt-list .appt-block {
+  color: $text-color;
+  line-height: 1.5;
+  b, strong {
+    font-weight: 400;
+  }
+  &.approved {
+    color: $brand-second;
+  }
+}
+
+body #booked-profile-page .booked-profile-appt-list .appt-block {
+  border-color: $gray-dark;
+  padding: 2.188em 0;
+}
+
+body #booked-profile-page .booked-tabs.login {
+  border-top-width: 0;
+  li.active a {
+    border-top: 1px solid $gray-dark;
+  }
+  li a {
+    border-top: 1px solid transparent;
+    &:hover {
+      border-top: 1px solid $gray-dark;
+    }
+  }
+}
+
+body #profile-login label, #profile-register label, #profile-forgot label {
+  font-weight: 400;
+}

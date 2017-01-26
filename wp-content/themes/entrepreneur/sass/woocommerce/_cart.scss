@@ -1,0 +1,137 @@
+.cross-sells,
+.cart_totals {
+  padding: 0;
+  margin: 0;
+  border: 0 solid;
+}
+
+.cross-sells + .cart_totals {
+  margin: 0;
+}
+
+.shop_table.cart {
+  .quantity .qty {
+    max-width: 70px;
+  }
+  img {
+    @include box-shadow(none);
+    width: 70px;
+  }
+  .remove {
+    color: #4d5058;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.500em;
+  }
+  .coupon {
+    display: inline-block;
+    label {
+      display: none;
+    }
+    .input-text {
+      margin-right: 0.625em;
+      display: inline-block;
+      width: 270px;
+    }
+  }
+  tbody td.actions {
+    text-align: left;
+  }
+  input[name="update_cart"] {
+    float: right;
+  }
+
+}
+
+.cart-collaterals {
+  ul.products {
+    li.product {
+      width: 25%;
+      &:nth-child(3n+1) {
+        clear: none;
+      }
+      &:nth-child(4n+1) {
+        clear: both;
+      }
+    }
+  }
+}
+
+.cart_totals {
+  overflow: hidden;
+  h2,
+  table,
+  .wc-proceed-to-checkout {
+    width: 50%;
+    float: right;
+    clear: both;
+  }
+  p {
+    margin: 0;
+  }
+  .shipping-calculator-form p {
+    margin: $margin 0 0;
+  }
+
+  .wc-proceed-to-checkout .button {
+    float: left;
+  }
+  .woocommerce-shipping-calculator {
+    margin-top: $margin;
+  }
+}
+
+.site-main .entry-content .payment_methods.methods {
+  li {
+    margin: 0;
+    padding: 0;
+    border: 0 solid;
+    list-style: none;
+  }
+}
+
+.create-account label {
+  display: inline-block;
+}
+
+h3 label {
+  font-weight: 700;
+}
+
+.payment_methods,
+#shipping_method {
+  list-style: none;
+  padding: 0;
+  margin-top: 0;
+
+}
+
+@media (max-width: 991px) {
+  .cart_totals h2, .cart_totals table, .cart_totals .wc-proceed-to-checkout {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .shop_table.cart .coupon {
+    display: block;
+  }
+  .shop_table.cart .coupon .input-text,
+  .shop_table.cart .coupon .button {
+    margin-bottom: 0.875em;
+  }
+  .shop_table.cart input[name="update_cart"] {
+    float: none;
+  }
+  .shop_table .product-thumbnail {
+    display: none;
+  }
+  .shop_table tbody td, .shop_table tbody th, .shop_table tfoot td, .shop_table tfoot th {
+    padding: 0.875em 0.250em;
+  }
+  .cart-collaterals ul.products li.product {
+    width: 270px;
+    max-width: 100%;
+  }
+
+}

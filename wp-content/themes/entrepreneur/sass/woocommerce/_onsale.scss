@@ -1,0 +1,11 @@
+.woocommerce span.onsale {
+    display:block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color:#ffffff;   
+    min-width: 100px;
+    padding: 0.375em;
+    text-align: center; 
+    background: $brand-primary;
+}

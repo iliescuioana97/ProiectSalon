@@ -1,0 +1,22 @@
+.woocommerce .woocommerce-message ,
+.woocommerce .woocommerce-info{ 
+    border-top:2px solid  $brand-primary;
+}
+.woocommerce .woocommerce-error .button, .woocommerce .woocommerce-info .button, .woocommerce .woocommerce-message .button {
+    float: right;
+}
+.woocommerce .woocommerce-error:after, .woocommerce .woocommerce-error:before, .woocommerce .woocommerce-info:after, .woocommerce .woocommerce-info:before, .woocommerce .woocommerce-message:after, .woocommerce .woocommerce-message:before {
+    content: " ";
+    display: table;
+}
+.clear, .woocommerce .woocommerce-breadcrumb:after, .woocommerce .woocommerce-error:after, .woocommerce .woocommerce-info:after, .woocommerce .woocommerce-message:after {
+    clear: both;
+}
+
+.woocommerce-error, .woocommerce .woocommerce-info, .woocommerce .woocommerce-message {
+    padding: $margin 0;
+    margin: 0 0 $margin;
+}
+.woocommerce .woocommerce-error {
+    border-top:2px solid  $error
+}

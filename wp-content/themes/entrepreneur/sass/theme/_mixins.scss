@@ -1,0 +1,13 @@
+@mixin meta-style() {
+  font-size: 0.875em;
+  color: $brand-second;
+  .fa:before {
+    margin-right: 0.714em;
+  }
+  a {
+    color: inherit;
+  }
+  &:hover:before {
+    text-decoration: none;
+  }
+}

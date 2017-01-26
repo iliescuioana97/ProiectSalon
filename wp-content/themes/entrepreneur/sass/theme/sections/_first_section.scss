@@ -1,0 +1,39 @@
+
+body.entrepreneur .first-section .booked-calendar-wrap.small table.booked-calendar td .date .number, body.entrepreneur .first-section table.booked-calendar td .date .number {
+  line-height: 2.875em;
+}
+.first-section {
+  .section-content .widget {
+    margin: 0 auto;
+  }
+  .widget_booked_calendar {
+    max-width: 420px;
+    margin: 0 auto;
+    .widgettitle, .widget-title {
+      background: $brand-primary;
+	  border-radius: 3px 3px 0 0;
+      color: #ffffff;
+	  font-size: 1.35em;
+      text-align: center;
+      margin: 0;
+      padding: 1em 0.633em;
+      position: relative;
+      &:after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        margin-left: -0.400em;
+        bottom: -0.267em;
+        display: block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0.400em 0.400em 0 0.400em;
+        border-color: $brand-primary transparent transparent transparent;
+      }
+    }
+  }
+  .section-buttons .button {
+    margin: $margin 0 0;
+  }
+}

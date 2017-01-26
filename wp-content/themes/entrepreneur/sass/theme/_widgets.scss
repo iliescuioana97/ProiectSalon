@@ -1,0 +1,176 @@
+.widget-title {
+  margin: 0 0 0.567em;
+}
+
+.widget {
+  margin-bottom: 4em;
+  a {
+    color: inherit;
+  }
+  ul,
+  ol {
+    padding-top: 0.875em;
+    ul, ol {
+      padding-top: 0;
+    }
+	li + li {
+      margin-top: 0.5em;
+   }
+  }
+  ul,
+  ol,
+  table {
+    margin-top: 0;
+  }
+}
+
+.widget_calendar {
+  caption {
+    padding-top: 0.875em;
+  }
+  table > thead > tr > th {
+    font-size: 1em;
+  }
+  table > tfoot > tr > td + td {
+    border-left: 0px solid;
+  }
+  table > thead > tr > th,
+  table > tbody > tr > th, table > tbody > tr > td, table > tfoot > tr > th, table > tfoot > tr > td {
+    padding: 0.250em
+  }
+  #next {
+    text-align: right;
+  }
+  a {
+    color: $brand-primary;
+  }
+}
+
+.site-footer {
+	.mp_entrepreneur_widget_recent_posts,
+	.widget_recent_entries {
+	  ul {
+		list-style: none;
+		padding-left: 0;
+	  }
+
+	  .post-date {
+		display: block;
+		margin-top: 0.563em;
+	  }
+	  li + li {
+		margin-top: 1.250em;
+	  }
+	}
+
+	.mp_entrepreneur_widget_recent_posts {
+	  .entry-thumbnail {
+		font-size: 1em;
+		margin: 0 1.250em 0.85em 0;
+		float: left;
+	  }
+	  .entry-content {
+		overflow: hidden;
+	  }
+	  .empty-entry-thumbnail {
+		background: $brand-primary;
+		width: 100px;
+		height: 100px;
+		color: #ffffff;
+		line-height: 100px;
+		&:hover {
+		  text-decoration: none;
+		}
+	  }
+	}
+}
+.post-date {
+  @include meta-style();
+}
+
+.widget_tag_cloud {
+  .tagcloud {
+    padding-top: 0.875em;
+  }
+}
+
+.mp_entrepreneur_widget_contact,
+.widget_text {
+  .fa {
+    color: #ffffff;
+    float: left;
+    margin: 0.188em 1em 0 0;
+  }
+  a {
+    color: $brand-primary;
+  }
+  table {
+    a.block, span.block {
+      overflow: hidden;
+      display: block;
+    }
+  }
+  table > tbody > tr > th, table > tbody > tr > td {
+    padding: 0;
+  }
+  table > tbody > tr + tr > td {
+    padding: 1em 0 0;
+  }
+  table > tbody > tr > td {
+    border: 0px solid;
+  }
+}
+
+.widget {
+  .site-title {
+    font-size: 1.875em;
+  }
+  .current-cat > a {
+    color: $brand-primary;
+  }
+}
+
+.mp_entrepreneur_widget_about {
+  .site-logo {
+    margin: 0 0 1.58em;
+  }
+  .site-description {
+    vertical-align: top;
+    padding: 0px 0 1.5em;
+  }
+  .header-logo {
+    padding: 0 0.500em 0 0;
+  }
+  .site-socials {
+    font-size: 1.250em;
+    margin: 1.550em 0 0;
+    a {
+      margin: 1em 1em 0 0;
+      display: inline-block;
+      &:hover {
+        color: $brand-primary;
+      }
+    }
+  }
+  .site-tagline {
+    margin: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .widget {
+    margin-bottom: 3em;
+  }
+  .mp_entrepreneur_widget_contact {
+    table, tbody, tr, td {
+      display: block;
+    }
+    td + td {
+      margin: 1em 0 0;
+    }
+  }
+}
+
+.footer-sidebar .widget-title {
+  text-transform: none;
+}

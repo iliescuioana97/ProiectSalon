@@ -1,0 +1,107 @@
+body {
+  .booked-calendar-wrap {
+    .booked-calendar {
+      &, &.small {
+        .booked-appt-list {
+          padding: 0;
+          font-size: 1em;
+          line-height: 1.5;
+          @include box-shadow(none);
+          h2 {
+            font-size: $font-size-h5;
+            color: $brand-second;
+            strong {
+              font-weight: 400;
+            }
+          }
+          button,
+          .timeslot .timeslot-people button {
+            font-size: 1em;
+            padding: 0;
+            .button-timeslot {
+              font-weight: 400;
+              font-size: 1em;
+              text-transform: none;
+            }
+          }
+        }
+      }
+    }
+    &.small {
+      .timeslot {
+        margin: 0 0 0.375em;
+      }
+    }
+  }
+}
+
+
+body .booked-calendar-wrap .booked-appt-list .timeslot .timeslot-time {
+  font-weight: 400;
+  color: $brand-second;
+}
+
+body .booked-calendar-wrap .booked-appt-list .timeslot .timeslot-people {
+  height: auto;
+  padding: 1em 1em 1em 0;
+}
+
+body .booked-calendar-wrap .booked-appt-list .timeslot .timeslot-time {
+  padding: 1em 0 1em 1em;
+  height: auto;
+}
+
+body .booked-calendar-wrap .booked-appt-list .timeslot:hover {
+  background: #f9f9f9;
+}
+
+body #booked-profile-page input[type=submit], body #booked-profile-page button, body .booked-list-view input[type=submit], body .booked-list-view button, body table.booked-calendar input[type=submit], body table.booked-calendar button, body .booked-modal input[type=submit], body .booked-modal button {
+  line-height: 1.5;
+  font-size: 0.875em;
+  padding: 0.857em 1.929em;
+}
+
+body .booked-form input[type=submit], body .booked-form button {
+  margin: 0 0.357em 0 0;
+}
+
+body #booked-profile-page input[type=submit], body #booked-profile-page button, body .booked-list-view input[type=submit], body .booked-list-view button, body table.booked-calendar input[type=submit], body table.booked-calendar button, body .booked-modal input[type=submit], body .booked-modal button {
+  background: #ffffff;
+  border: 2px solid $brand-second;
+  color: $brand-second;
+}
+
+body #booked-profile-page input[type=submit]:hover:hover, body #booked-profile-page button:hover:hover, body .booked-list-view input[type=submit]:hover:hover, body .booked-list-view button:hover:hover, body table.booked-calendar input[type=submit]:hover:hover, body table.booked-calendar button:hover:hover, body .booked-modal input[type=submit]:hover:hover, body .booked-modal button:hover:hover {
+  color: #ffffff;
+  border: 2px solid $brand-second;
+  background: $brand-second !important;
+}
+
+body #booked-profile-page input[type=submit].button-primary, body table.booked-calendar input[type=submit].button-primary, body .booked-list-view input[type=submit].button-primary, body .booked-modal input[type=submit].button-primary {
+  border-width: 2px;
+}
+
+body #booked-profile-page input[type=submit].button-primary:hover, body table.booked-calendar input[type=submit].button-primary:hover, body .booked-list-view button.button:hover, body .booked-list-view input[type=submit].button-primary:hover, body .booked-modal input[type=submit].button-primary:hover, body table.booked-calendar th, body table.booked-calendar .booked-appt-list .timeslot .timeslot-people button:hover, body #booked-profile-page .booked-profile-appt-list .appt-block .google-cal-button > a:hover {
+  background: $brand-second !important;
+}
+body #booked-page-form input[type=text], body #booked-page-form input[type=password], body #booked-page-form input[type=email], body #booked-page-form textarea,
+body .booked-form .field input[type=text], body .booked-form .field input[type=password], body .booked-form .field input[type=tel], body .booked-form .field input[type=email], body .booked-form .field textarea {
+  padding: $padding-base-vertical $padding-base-horizontal;
+  font-size: $font-size-base;
+  color: $input-color;
+  background-color: $input-bg;
+  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  border: 0px solid;
+  border-bottom: 2px solid $input-border;
+  border-radius: $input-border-radius; // Note: This has no effect on <select>s in some browsers, due to the limited stylability of <select>s in CSS.
+}
+
+body .booked-form .field p.field-small-p,
+#customerChoices .field .checkbox-radio-block label {
+  font-size: 1em;
+}
+
+#customerChoices {
+  margin: 0 -1.875em;
+  padding: 1em 1.875em;
+}

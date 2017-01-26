@@ -1,0 +1,561 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2016-05-25 17:02+0300\n"
+"PO-Revision-Date: 2016-05-25 17:02+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.3\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e;_x;_n;esc_attr__;esc_attr_e;esc_html__;"
+"esc_html_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: classes/customiser/customiser.php:55
+msgid "Footer Logo"
+msgstr ""
+
+#: classes/customiser/customiser.php:64
+msgid "Fonts"
+msgstr ""
+
+#: classes/customiser/customiser.php:75
+msgid "Site Title Font Family"
+msgstr ""
+
+#: classes/customiser/customiser.php:87
+msgid "Site Title Font Weight"
+msgstr ""
+
+#: classes/customiser/customiser.php:99
+msgid "Site Title Font Size"
+msgstr ""
+
+#: classes/customiser/customiser.php:112
+msgid "Make Tagline font family same as Title"
+msgstr ""
+
+#: classes/customiser/customiser.php:129
+msgid "Site Font Family"
+msgstr ""
+
+#: classes/customiser/customiser.php:141
+msgid "Site Font Weight"
+msgstr ""
+
+#: classes/customiser/customiser.php:153
+msgid "Site Font Size"
+msgstr ""
+
+#: classes/customiser/customiser.php:163
+msgid "Services Section"
+msgstr ""
+
+#: classes/customiser/customiser.php:166
+msgid ""
+"<i>Fill in this section by adding \"Entrepreneur - Services & Prices\" "
+"widgets to \"Customize > Widgets > Services & Prices section\"</i><hr/"
+msgstr ""
+
+#: classes/customiser/customiser.php:182 classes/customiser/customiser.php:308
+#: classes/customiser/customiser.php:375
+msgid "Hide this section"
+msgstr ""
+
+#: classes/customiser/customiser.php:194 classes/sections/services.php:125
+#: classes/widget/Items/Services.php:13
+msgid "Services & Prices"
+msgstr ""
+
+#: classes/customiser/customiser.php:202 classes/customiser/customiser.php:328
+#: classes/widget/Items/Services.php:114
+msgid "Title"
+msgstr ""
+
+#: classes/customiser/customiser.php:212 classes/sections/services.php:141
+msgid "book now"
+msgstr ""
+
+#: classes/customiser/customiser.php:220
+msgid "Button label"
+msgstr ""
+
+#: classes/customiser/customiser.php:238
+msgid "Button url"
+msgstr ""
+
+#: classes/customiser/customiser.php:260 classes/customiser/customiser.php:399
+msgid "Background image"
+msgstr ""
+
+#: classes/customiser/customiser.php:279 classes/customiser/customiser.php:346
+#: classes/customiser/customiser.php:418
+msgid "Section position"
+msgstr ""
+
+#: classes/customiser/customiser.php:289
+msgid "Portfolio Section"
+msgstr ""
+
+#: classes/customiser/customiser.php:292
+msgid ""
+"<i>Go to \"Dashboard > Portfolio\" and add posts to fill this section</i><hr/"
+msgstr ""
+
+#: classes/customiser/customiser.php:320 classes/posttype/portfolio.php:12
+#: classes/posttype/portfolio.php:13 classes/sections/portfolio.php:1
+msgid "Portfolio"
+msgstr ""
+
+#: classes/customiser/customiser.php:356
+msgid "Testimonials Section"
+msgstr ""
+
+#: classes/customiser/customiser.php:359
+msgid ""
+"<i>Go to \"Dashboard > Testimonials\" and add posts to fill this section</"
+"i><hr/"
+msgstr ""
+
+#: classes/customiser/customiser.php:465
+msgid "Ultra Light"
+msgstr ""
+
+#: classes/customiser/customiser.php:466
+msgid "Ultra Light Italic"
+msgstr ""
+
+#: classes/customiser/customiser.php:467
+msgid "Light"
+msgstr ""
+
+#: classes/customiser/customiser.php:468
+msgid "Light Italic"
+msgstr ""
+
+#: classes/customiser/customiser.php:469
+msgid "Book"
+msgstr ""
+
+#: classes/customiser/customiser.php:470
+msgid "Book Italic"
+msgstr ""
+
+#: classes/customiser/customiser.php:471
+msgid "Regular"
+msgstr ""
+
+#: classes/customiser/customiser.php:472
+msgid "Regular Italic"
+msgstr ""
+
+#: classes/customiser/customiser.php:473
+msgid "Medium"
+msgstr ""
+
+#: classes/customiser/customiser.php:474
+msgid "Medium Italic"
+msgstr ""
+
+#: classes/customiser/customiser.php:475
+msgid "Semi-Bold"
+msgstr ""
+
+#: classes/customiser/customiser.php:476
+msgid "Semi-Bold Italic"
+msgstr ""
+
+#: classes/customiser/customiser.php:477
+msgid "Bold"
+msgstr ""
+
+#: classes/customiser/customiser.php:478
+msgid "Bold Italic"
+msgstr ""
+
+#: classes/customiser/customiser.php:479
+msgid "Extra Bold"
+msgstr ""
+
+#: classes/customiser/customiser.php:480
+msgid "Extra Bold Italic"
+msgstr ""
+
+#: classes/customiser/customiser.php:481
+msgid "Ultra Bold"
+msgstr ""
+
+#: classes/customiser/customiser.php:482
+msgid "Ultra Bold Italic"
+msgstr ""
+
+#: classes/footer/footer.php:20
+msgid ""
+"The company provides top world natural products and high class treatments "
+"for over 3 years. We are sure that you deserve excellent service and deliver "
+"it with a great pleasure."
+msgstr ""
+
+#: classes/metabox/portfolio.php:18
+msgid "Subtitle"
+msgstr ""
+
+#: classes/metabox/testimonials.php:18
+msgid "Author name"
+msgstr ""
+
+#: classes/posttype/portfolio.php:27 classes/posttype/portfolio.php:42
+msgid "Categories"
+msgstr ""
+
+#: classes/posttype/portfolio.php:28
+msgid "Category"
+msgstr ""
+
+#: classes/posttype/portfolio.php:29
+msgid "Search Categories"
+msgstr ""
+
+#: classes/posttype/portfolio.php:30
+msgid "Popular Categories"
+msgstr ""
+
+#: classes/posttype/portfolio.php:31
+msgid "All Categories"
+msgstr ""
+
+#: classes/posttype/portfolio.php:34
+msgid "Edit Category"
+msgstr ""
+
+#: classes/posttype/portfolio.php:35
+msgid "Update Category"
+msgstr ""
+
+#: classes/posttype/portfolio.php:36
+msgid "Add New Category"
+msgstr ""
+
+#: classes/posttype/portfolio.php:37
+msgid "New Category Name"
+msgstr ""
+
+#: classes/posttype/portfolio.php:38
+msgid "Separate categories with commas"
+msgstr ""
+
+#: classes/posttype/portfolio.php:39
+msgid "Add or remove categories"
+msgstr ""
+
+#: classes/posttype/portfolio.php:40
+msgid "Choose from the most used categories"
+msgstr ""
+
+#: classes/posttype/portfolio.php:41
+msgid "No categories found."
+msgstr ""
+
+#: classes/posttype/testimonials.php:10
+msgid "Testimonials"
+msgstr ""
+
+#: classes/posttype/testimonials.php:11
+msgid "Testimonial"
+msgstr ""
+
+#: classes/sections/portfolio.php:1
+msgid "Top Models Styling"
+msgstr ""
+
+#: classes/sections/portfolio.php:1
+msgid "Fashion Hair and Makeup"
+msgstr ""
+
+#: classes/sections/services.php:28
+msgid "Hair Styling"
+msgstr ""
+
+#: classes/sections/services.php:32 classes/sections/services.php:69
+#: classes/widget/Items/Services.php:146
+msgid "Women"
+msgstr ""
+
+#: classes/sections/services.php:32 classes/sections/services.php:69
+#: classes/widget/Items/Services.php:146
+msgid "Men"
+msgstr ""
+
+#: classes/sections/services.php:35 classes/widget/Items/Services.php:45
+#: classes/widget/Items/Services.php:149
+msgid "Stylist"
+msgstr ""
+
+#: classes/sections/services.php:36 classes/widget/Items/Services.php:46
+#: classes/widget/Items/Services.php:150
+msgid "Senior Stylist"
+msgstr ""
+
+#: classes/sections/services.php:37 classes/widget/Items/Services.php:47
+#: classes/widget/Items/Services.php:151
+msgid "Master Stylist"
+msgstr ""
+
+#: classes/sections/services.php:38 classes/widget/Items/Services.php:48
+#: classes/widget/Items/Services.php:152
+msgid "Celebrity Stylist"
+msgstr ""
+
+#: classes/sections/services.php:39 classes/widget/Items/Services.php:153
+msgid "Wedding stylist"
+msgstr ""
+
+#: classes/sections/services.php:47
+msgid "Makeup"
+msgstr ""
+
+#: classes/sections/services.php:50
+msgid "Jnr"
+msgstr ""
+
+#: classes/sections/services.php:50
+msgid "Snr"
+msgstr ""
+
+#: classes/sections/services.php:53
+msgid "False Lash Application"
+msgstr ""
+
+#: classes/sections/services.php:54
+msgid "Airbrush Makeup"
+msgstr ""
+
+#: classes/sections/services.php:55
+msgid "Traditional Makeup"
+msgstr ""
+
+#: classes/sections/services.php:56
+msgid "Evening Makeup"
+msgstr ""
+
+#: classes/sections/services.php:57
+msgid "Bridal Makeup"
+msgstr ""
+
+#: classes/sections/services.php:48 classes/sections/services.php:67
+msgid ""
+"<table>\n"
+"<thead><tr>\n"
+"<th></th><th>"
+msgstr ""
+
+#: classes/sections/services.php:66
+msgid "Colouring"
+msgstr ""
+
+#: classes/sections/services.php:72
+msgid "Permanent, Demi Gloss"
+msgstr ""
+
+#: classes/sections/services.php:73
+msgid "Colour Correction"
+msgstr ""
+
+#: classes/sections/services.php:74
+msgid "Fashion Foiling"
+msgstr ""
+
+#: classes/sections/services.php:75
+msgid "Tint roots"
+msgstr ""
+
+#: classes/sections/services.php:76
+msgid "Tint and foils"
+msgstr ""
+
+#: classes/sections/testimonials.php:1
+msgid "The staff always understands my needs clearly"
+msgstr ""
+
+#: classes/sections/testimonials.php:1
+msgid ""
+"I got a number of different treatments here and they have all been "
+"excellent. The products used are exceptional and the staff are trained nice "
+"on the products used and the customer experience. Big love to you!"
+msgstr ""
+
+#: classes/sections/testimonials.php:1
+msgid "Gloria Mann"
+msgstr ""
+
+#: classes/sections/testimonials.php:1
+msgid "Simply impressed with the variety of services"
+msgstr ""
+
+#: classes/sections/testimonials.php:1
+msgid ""
+"Many thanks for doing my hair and makeup for my wedding, it was so stunning "
+"that everyone said how fantastic I looked. It was perfect and I had an "
+"amazing day. Best day of my life!"
+msgstr ""
+
+#: classes/sections/testimonials.php:1
+msgid "I recommend the all-inclusive wedding treatments at this salon"
+msgstr ""
+
+#: classes/sections/testimonials.php:1
+msgid ""
+"I recommend this place to everybody. A very friendly professional salon that "
+"offers awesome services. I've had the most amazing experiences here with my "
+"hairdresser Kony, she knew exactly what I was looking for and she delivered! "
+"Very much pleased."
+msgstr ""
+
+#: classes/widget/Items/About.php:12
+msgid "About Us"
+msgstr ""
+
+#: classes/widget/Items/About.php:13
+msgid "About us"
+msgstr ""
+
+#: classes/widget/Items/About.php:21
+msgid ""
+"<p>This WordPress Theme is your easy solution for building strong "
+"competitive financial website for your business. Don&rsquo;t waste your "
+"priceless time, install the theme and go ahead.</p>"
+msgstr ""
+
+#: classes/widget/Items/About.php:159 classes/widget/Items/Location.php:66
+#: classes/widget/Items/RecentPosts.php:155
+msgid "Title:"
+msgstr ""
+
+#: classes/widget/Items/About.php:170
+msgid "Show logo"
+msgstr ""
+
+#: classes/widget/Items/About.php:173
+msgid "Facebook link:"
+msgstr ""
+
+#: classes/widget/Items/About.php:178
+msgid "Twitter link:"
+msgstr ""
+
+#: classes/widget/Items/About.php:183
+msgid "Linkedin link:"
+msgstr ""
+
+#: classes/widget/Items/About.php:188
+msgid "Google+ link:"
+msgstr ""
+
+#: classes/widget/Items/About.php:193
+msgid "Instagram link:"
+msgstr ""
+
+#: classes/widget/Items/About.php:198
+msgid "Pinterest link:"
+msgstr ""
+
+#: classes/widget/Items/About.php:203
+msgid "Tumblr link:"
+msgstr ""
+
+#: classes/widget/Items/About.php:208
+msgid "Youtube link:"
+msgstr ""
+
+#: classes/widget/Items/About.php:213
+msgid "Rss link:"
+msgstr ""
+
+#: classes/widget/Items/Location.php:12 classes/widget/Items/Location.php:13
+msgid "Location"
+msgstr ""
+
+#: classes/widget/Items/Location.php:19 classes/widget/Items/Location.php:60
+msgid "location"
+msgstr ""
+
+#: classes/widget/Items/Location.php:20
+msgid "1254/21 West-Holland Street </br>Manchester, United Kingdom"
+msgstr ""
+
+#: classes/widget/Items/Location.php:21 classes/widget/Items/Location.php:62
+msgid "345-677-554"
+msgstr ""
+
+#: classes/widget/Items/Location.php:61
+msgid "1254/21 West-Holland Street <br/> Manchester United Kingdom"
+msgstr ""
+
+#: classes/widget/Items/Location.php:72
+msgid "Address:"
+msgstr ""
+
+#: classes/widget/Items/Location.php:77
+msgid "Phone:"
+msgstr ""
+
+#: classes/widget/Items/Location.php:83
+msgid "Google map iframe:"
+msgstr ""
+
+#: classes/widget/Items/RecentPosts.php:14
+msgid "Recent posts"
+msgstr ""
+
+#: classes/widget/Items/RecentPosts.php:15
+msgid "Show recent posts"
+msgstr ""
+
+#: classes/widget/Items/RecentPosts.php:62
+msgid "Recent Posts"
+msgstr ""
+
+#: classes/widget/Items/RecentPosts.php:161
+msgid "Number of posts to show:"
+msgstr ""
+
+#: classes/widget/Items/RecentPosts.php:170
+msgid "Display post thumbnail?"
+msgstr ""
+
+#: classes/widget/Items/Services.php:12
+msgid "Services & Prices "
+msgstr ""
+
+#: classes/widget/Items/Services.php:42
+msgid "Womens"
+msgstr ""
+
+#: classes/widget/Items/Services.php:42
+msgid "Mens"
+msgstr ""
+
+#: classes/widget/Items/Services.php:49
+msgid "Bride"
+msgstr ""
+
+#: classes/widget/Items/Services.php:123
+msgid "Image"
+msgstr ""
+
+#: classes/widget/Items/Services.php:134
+msgid "Upload Image"
+msgstr ""
+
+#: classes/widget/Items/Services.php:139
+msgid "Text"
+msgstr ""
+
+#: classes/widget/Items/Services.php:161
+msgid "Use tag &#8249;table&#8250;&#8249;/table&#8250; inside text"
+msgstr ""

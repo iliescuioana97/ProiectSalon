@@ -1,0 +1,15 @@
+.motopress-cta-style-brand {
+    background: $brand-primary;
+    &,
+   .motopress-cta-content-container .motopress-cta-content-heading, 
+   .motopress-cta-content-container .motopress-cta-content-subheading{
+       color:#ffffff;
+   }
+}
+.wrapper-mce-lite{
+    .motopress-cta-obj .motopress-cta.motopress-cta-style-3d {
+        background-color: $brand-primary;
+        color: #ffffff;
+        @include box-shadow(none);
+    }  
+}

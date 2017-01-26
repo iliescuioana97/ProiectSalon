@@ -1,0 +1,63 @@
+.section-subtitle {
+  font-size: 1.125em;
+  color: $brand-primary;
+  text-transform: uppercase;
+  margin-top: 0.444em;
+}
+
+.section-title {
+  font-size: 2.625em;
+  margin: 0;
+}
+
+.section-bg-wrapper {
+  background-position: top center;
+  @include background-size(cover);
+  background-repeat: no-repeat;
+}
+
+.section-bg {
+  min-width: 100%;
+  background: rgba(35, 41, 46, 0.15);
+}
+
+.section-buttons,
+.section-header {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.section-table-wrapper {
+  display: table;
+  width: 100%;
+}
+
+.section-buttons {
+  text-align: right;
+  .button {
+    margin-left: $margin;
+  }
+}
+
+.section-content {
+  padding: 6.813em 0 6.813em;
+  .widget {
+    margin: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .section-content {
+    padding: 3em 0 3em;
+  }
+  .section-buttons, .section-header {
+    text-align: center;
+    display: block;
+  }
+  .section-buttons {
+    margin-top: 1.5em;
+  }
+  .section-buttons .button {
+    margin-left: 0;
+  }
+}

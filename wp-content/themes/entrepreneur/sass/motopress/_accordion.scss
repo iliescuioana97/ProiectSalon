@@ -1,0 +1,77 @@
+.motopress-accordion-obj.ui-accordion.mp-theme-accordion-brand {
+  .motopress-accordion-item {
+    border-bottom-width: 0;
+    & + .motopress-accordion-item {
+      margin-top: 1.188em;
+    }
+  }
+  .ui-accordion-header {
+    color: #ffffff;
+    background: $text-color;
+    border: 0px solid $text-color;
+
+    &.ui-state-active {
+      background: transparent;
+      color: $text-color;
+      border: 1px solid $gray-dark;
+      border-bottom: 0px solid;
+    }
+    .ui-icon {
+      text-indent: 0;
+      background: #414c56;
+      border-radius: 0;
+      border: 0 solid !important;
+      width: 3.75em;
+      height: 3.7em;
+      @include transition-property(background-color);
+      @include transition-duration(0.1s);
+      @include transition-timing-function(ease-in-out);
+      &:before {
+        content: "\f105";
+        font: normal normal normal 1.125em/1 FontAwesome;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        color: #878f95;
+        display: block;
+        margin: 1.14em 0 0;
+        text-align: center;
+      }
+    }
+    &.ui-state-active {
+      .ui-icon {
+        background: transparent;
+      }
+      .ui-icon:before {
+        content: "\f107";
+        color: $brand-second;
+      }
+    }
+    .ui-accordion-header-icon {
+      top: -0px;
+      margin-top: 0;
+      left: auto;
+      right: -0px;
+    }
+  }
+  .ui-accordion-content {
+    border: 1px solid $gray-dark;
+    border-top: 0px solid;
+    padding: 0 2.375em 0.626em;
+    & *:first-child{
+      margin-top: 0;
+    }
+  }
+  .ui-accordion-header {
+    padding: 1.27em 1.583em !important;
+    font-size: 1.500em;
+    text-transform: none;
+    font-weight: 400;
+  }
+
+  .ui-accordion-icons {
+    padding-left: 1.583em !important;
+    padding-right: 1.583em !important;
+  }
+
+}

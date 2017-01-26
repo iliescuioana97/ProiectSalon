@@ -1,0 +1,35 @@
+@import "compass/css3";
+@import "bootstrap/mixins";
+@import "bootstrap/variables";
+@import "theme/variables";
+@import "motopress/tabs";
+@import "motopress/accordion";
+@import "motopress/table";
+@import "motopress/button";
+@import "motopress/postGrid";
+@import "motopress/list";
+@import "motopress/slider";
+@import "motopress/icon";
+@import "motopress/cta";
+@import "motopress/countdownTimer";
+.motopress-quotes,
+.motopress-social-profile-obj,
+.entrepreneur .motopress-tabs-obj.ui-tabs,
+.motopress-table-obj table,
+.motopress-image-ob,
+.motopress-grid-gallery-obj,
+.motopress-google-chart,
+.motopress-image-obj ,
+.motopress-google-map-obj,
+.motopress-video-obj,
+.entrepreneur .motopress-social-profile-obj,
+.entrepreneur .motopress-share-buttons,
+.motopress-cta-obj,
+.motopress-accordion-obj {
+    margin: 0 0 $margin; 
+}
+.entrepreneur .motopress-service-box-obj .motopress-service-box-button-section .motopress-btn{
+     margin: 0 0 $margin;
+}
+
+

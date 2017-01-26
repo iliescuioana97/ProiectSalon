@@ -1,0 +1,147 @@
+.portfolio-section {
+
+	overflow: hidden;
+
+	.portfolio {
+	  margin: 0 -15px;
+	  padding: 1.85em 0 0;
+	}
+
+	.porfolio-title {
+	  margin: 0 0 0.286em;
+	}
+
+	.portfolio-element {
+	  a {
+		position: relative;
+		background: rgba(53, 56, 57, 1);
+	  }
+	  &:hover {
+		img {
+		  opacity: 0.2;
+		  @include transition(opacity .15s ease-out);
+		}
+		.porfolio-content {
+		  opacity: 1;
+		}
+	  }
+	  .porfolio-content {
+		padding: 3em;
+		text-align: center;
+		@include transition(opacity .15s ease-out);
+		opacity: 0;
+		position: absolute;;
+		top: 0;
+		left: 0;
+		right: 0;
+		position: absolute;
+		top: 50%;
+		@include transform(translateY(-50%));
+		.fa {
+		  font-size: 1.500em;
+		  margin-top: 1.292em;
+		  padding: 0.333em 0.458em 0.458em;
+		  line-height: 1;
+		}
+		
+		p {
+			color: #ffffff;
+			margin: 0.5em 0 0.25em;
+			font-weight: 300;
+		}
+	  }
+	}
+
+	.portfolio-wrapper {
+	  margin: 0 auto;
+	  display: -webkit-box;
+	  display: -webkit-flex;
+	  display: -ms-flexbox;
+	  display: flex;
+	  flex-wrap: wrap;
+	  -webkit-flex-wrap: wrap;
+
+	  flex-wrap: -moz-wrap;
+	  flex-wrap: -webkit-wrap;
+	  align-content: stretch;
+	  align-items: stretch;
+
+	  .portfolio-element {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		text-align: center;
+		align-items: center;
+		justify-content: center;
+		flex-grow: 1;
+		width: 25%;
+		//height: 346px;
+		padding: 15px;
+		&:first-child,
+		&:nth-child(5) {
+		  width: 50%;
+		}
+		a {
+		  display: block;
+		  width: 100%;
+		  height: 100%;
+		  overflow: hidden;
+		}
+		img {
+		  position: absolute;;
+		  top: 0;
+		  left: 50%;
+		  right: 0;
+		  position: absolute;
+		  top: 50%;
+		  @include transform(translate(-50%, -50%));
+		  min-width: 101%;
+		  min-height: 101%;
+		  max-width: none;
+		}
+	  }
+	}
+
+	.porfolio-title {
+	  color: $brand-primary;
+	}
+
+	.portfoli-categories {
+	  color: $brand-primary;
+	}
+
+	  
+	.section-header {
+		display: block;
+	}
+	.section-title {
+		text-align: center;
+	}
+
+	@media (max-width: 991px) {
+	  .porfolio-content {
+		.portfoli-categories, .button {
+		  display: none;
+		}
+	  }
+	}
+
+	@media (max-width: 767px) {
+	  .portfolio {
+		margin: 0 -7.5px;
+	  }
+	  .portfolio-wrapper .portfolio-element {
+		padding: 7.5px;
+	  }
+	  .portfolio-wrapper .portfolio-element {
+		width: 50%;
+	  }
+	  .porfolio-content {
+		display: none;
+	  }
+	  .portfolio-element:hover img {
+		opacity: 1;
+	  }
+	}
+}

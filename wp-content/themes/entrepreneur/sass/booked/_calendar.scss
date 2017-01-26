@@ -1,0 +1,143 @@
+
+.booked-calendar-wrap.small {
+  font-size: 1em;
+}
+
+body.entrepreneur {
+  .booked-calendar-wrap.small table.booked-calendar,
+  table.booked-calendar {
+    tr.week td.active {
+      background: #ffffff;
+      border-bottom-color: $gray-dark;
+    }
+    td .date .number {
+      line-height: inherit;
+      display: block;
+      border-radius: 0;
+      width: 100%;
+      height: 100%;
+      line-height: inherit;
+    }
+    td {
+      border: 0px solid;
+      color: $brand-second;
+      background: #ffffff;
+      padding: 5px;
+      font-size: 1em;
+    }
+    tr + tr {
+      td {
+        border-top: 1px solid $gray-dark;
+      }
+    }
+    th {
+      border: 0px solid;
+      font-size: 1em;
+    }
+    & > thead > tr {
+      background: #48545e;
+    }
+    thead {
+      text-transform: none;
+    }
+    .fa-arrow-right:before {
+      content: "\f105";
+    }
+    .fa-arrow-left:before {
+      content: "\f104";
+    }
+
+    tr.week td.active {
+      &, &:hover {
+        .date {
+          &, span {
+            background: #eeeff0 !important;
+          }
+        }
+      }
+    }
+    tr.week td.active .date .number {
+      @include transform(scale(1));
+    }
+    td {
+      font-size: 1em;
+    }
+    td.prev-date {
+      &,
+      &:hover {
+        .date {
+          &,
+          span {
+            background: #ffffff !important;
+            color: $gray-dark !important;
+          }
+        }
+
+      }
+    }
+    td.next-month .date,
+    td.prev-month .date {
+      &, span {
+        color: $gray-dark !important;
+        background: #ffffff;
+      }
+    }
+    thead {
+      tr.days th {
+        font-size: 0.9em;
+        text-transform: none;
+        padding: 0 0 1em 0;
+        border: 0px solid;
+        background: #48545e !important;
+        color: #f9f9f9 !important;
+      }
+      th {
+        padding: 1em 0;
+        font-size: 0.9em;
+		color: #f0f0f0 !important;	
+        .page-left,
+        .page-right {
+          top: 50%;
+		  margin-top: -9px;
+          font-size: 18px;
+          &:hover {
+            color: $brand-primary !important;
+          }
+        }
+        .page-right {
+          right: 1.188em;
+        }
+        .page-left {
+          left: 1.188em;
+        }
+      }
+    }
+    td.booked {
+      &, &:hover {
+        .date {
+          &, span {
+            background: $brand-primary !important;
+            color: #ffffff !important;
+          }
+        }
+
+      }
+    }
+  }
+}
+
+body.entrepreneur table.booked-calendar td.today .date,
+body.entrepreneur .booked-calendar-wrap.small table.booked-calendar td.today:hover .date,
+body.entrepreneur .booked-calendar-wrap.small table.booked-calendar td.today .date {
+    //color: #ffffff !important;
+    outline: 1px solid $gray-dark !important;
+	background: transparent !important;;
+}
+
+body.entrepreneur .booked-calendar-wrap.small table.booked-calendar td.today:hover .date span {
+	background: $brand-primary !important;
+}
+
+body.entrepreneur table.booked-calendar tr.week td.active .date span {
+  color: #000 !important;
+}

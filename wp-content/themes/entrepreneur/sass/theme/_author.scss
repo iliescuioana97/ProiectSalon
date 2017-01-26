@@ -1,0 +1,25 @@
+.author-wrapper {
+  background: $gray;
+  padding: 2.375em;
+  margin: 0 0 4.000em;
+  .single &{
+    margin: 3.063em 0;
+  }
+  .author-avatar {
+    float: left;
+    margin-right: 1.500em;
+  }
+  .author-description {
+    overflow: hidden;
+  }
+  h6 {
+    text-transform: none;
+    margin: 0 0 0.667em;
+  }
+  p {
+    margin: 1em 0;
+  }
+  .date-post {
+    @include meta-style();
+  }
+}

@@ -1,0 +1,87 @@
+body #booked-profile-page .booked-profile-header {
+  background: #48545e !important;
+  padding: $margin;
+  border-radius: 0;
+  border: 0px solid;
+
+}
+
+body #booked-profile-page .booked-user h3 {
+  padding: 0.125em 0 0 0;
+  float: none;
+  font-size: 1.500em;
+  display: block;
+  strong {
+    font-weight: 400;
+    line-height: inherit;
+  }
+}
+
+body #booked-profile-page .booked-user-avatar {
+  width: 50px;
+  height: 50px;
+  margin: 0 0.8em 0 0;
+  img {
+    border-radius: 0;
+  }
+}
+
+body #booked-profile-page .booked-profile-header .booked-logout-button {
+  color: #ffffff;
+  top: 0;
+  font-size: 0.542em;
+  text-transform: uppercase;
+  float: right;
+  padding: 0.615em 1.538em;
+  border: 2px solid #ffffff;
+  &:hover,
+  &:focus,
+  &.focus {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  &:hover {
+    color: #ffffff;
+    background: $brand-second;
+    border: 2px solid $brand-second;
+  }
+}
+
+body #booked-profile-page .booked-profile-appt-list .appt-block .status-block,
+body #booked-profile-page .booked-profile-appt-list .appt-block .booked-cal-buttons .google-cal-button > a,
+body #booked-profile-page .booked-profile-appt-list .appt-block .booked-cal-buttons a {
+  font-size: 0.813em;
+  text-transform: uppercase;
+  padding: 0.615em 1.538em;
+  border-radius: 0;
+  vertical-align: top;
+  line-height: 1.5;
+}
+
+body #booked-profile-page .booked-profile-appt-list .appt-block .booked-cal-buttons .google-cal-button > a,
+body #booked-profile-page .booked-profile-appt-list .appt-block .booked-cal-buttons a.cancel {
+
+  &:hover {
+    color: #ffffff;
+    background: $brand-second;
+    border: 2px solid $brand-second;
+  }
+}
+
+body #booked-profile-page .booked-profile-appt-list .appt-block .booked-cal-buttons .google-cal-button > a {
+  border: 2px solid transparent;
+  &:hover {
+    border: 2px solid $brand-second !important;
+  }
+}
+
+body #booked-profile-page .booked-profile-appt-list .appt-block .booked-cal-buttons a.cancel {
+  color: $brand-second;
+  border: 2px solid $brand-second;
+  background: #ffffff;
+}
+
+body #booked-page-form input[type=email], body #booked-page-form input[type=text], body #booked-page-form input[type=password], body #booked-page-form textarea, body #booked-page-form {
+  font-size: 1em;
+}
+

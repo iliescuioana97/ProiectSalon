@@ -1,0 +1,62 @@
+.post-entry + .post-entry {
+  margin-top: 4.000em;
+}
+
+.post-entry {
+  margin-bottom: 4.000em;
+}
+
+.more-link {
+  display: inline-block;
+  margin-bottom: 0; // For input.btn
+  font-weight: $btn-font-weight;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  border: 2px solid transparent;
+  white-space: nowrap;
+  @include button-size(0.625em, 1.750em, $font-size-base, $line-height-base, $btn-border-radius-base);
+  @include user-select(none);
+  text-transform: uppercase;
+  color: $btn-default-color;
+  background: $btn-default-bg;
+  @include transition(background 0.3s ease);
+
+  &,
+  &:active {
+    &:focus {
+      @include tab-focus;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    color: $btn-default-color;
+    text-decoration: none;
+  }
+  &:hover {
+    background: $brand-second;
+  }
+
+}
+
+@media (max-width: 767px) {
+  .post-wrapper .entry-title {
+    margin: 0 0 0.8em;
+  }
+
+  .post-wrapper {
+    padding: 1.375em 1.375em 0;
+  }
+  .post-entry + .post-entry {
+    margin-top: 3.000em;
+  }
+  .post-entry {
+    margin-bottom: 3.000em;
+  }
+  .entry-meta {
+    display: none;
+  }
+
+}

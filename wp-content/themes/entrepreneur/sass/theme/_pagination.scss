@@ -1,0 +1,69 @@
+.navigation {
+  padding: 2.375em 2.375em 1.938em;
+  overflow: hidden;
+  border: 1px solid $gray-dark;
+  margin: 4.000em 0;
+  text-transform: uppercase;
+  &.wp-paging-navigation {
+    margin: 1.5em 0;
+  }
+  &.navigation-prev-next {
+  }
+  a {
+    color: inherit;
+  }
+  a {
+    text-decoration: none;
+    span {
+      color: inherit;
+      border: 0px solid;
+      background: transparent;
+    }
+  }
+  &.wp-paging-navigation a,
+  &.wp-paging-navigation > span,
+  .page-numbers {
+    display: inline-block;
+    padding: 0.615em 1.231em;
+    margin: 0 0.308em 0.615em 0;
+    font-size: 0.813em;
+    border: 2px solid;
+    //float: left;
+    &.dots {
+      border: 2px solid transparent;
+      padding: 0.615em;
+    }
+    &:last-child {
+      margin-right: 0;
+
+    }
+    &.next {
+      float: right;
+      min-width: 100px;
+      text-align: center;
+    }
+  }
+  &.wp-paging-navigation a:hover,
+  &.wp-paging-navigation > span,
+  a.page-numbers:hover,
+  .page-numbers.current {
+    color: #ffffff;
+    background: $brand-primary;
+    border: 2px solid $brand-primary;
+
+  }
+
+}
+
+@media (max-width: 991px) {
+  .navigation.wp-paging-navigation a.next, .navigation.wp-paging-navigation > span.next, .navigation .page-numbers.next {
+    float: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .navigation {
+    margin: 3.000em 0;
+    padding: 1.375em 1.375em 0.938em;
+  }
+}

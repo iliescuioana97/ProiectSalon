@@ -1,0 +1,74 @@
+body .booked-modal .bm-window {
+  /*padding: 0;
+  background: #ffffff;
+  border-radius: 0;
+  @include box-shadow(none);*/
+  p,
+  p.name {
+    font-size: 1em;
+    margin: 0 0 1.125em;
+  }
+  p.name {
+    //margin: 0 0 2.375em;
+    color: $brand-second;
+  }
+  b {
+    font-weight: 400;
+  }
+
+  .booked-scrollable {
+    background: #ffffff;
+    //border-radius: 0;
+    //padding: 1.875em 1.875em;
+    //@include box-sizing(content-box);
+    p.booked-title-bar {
+      position: inherit;
+      padding: 0;
+      border-radius: 0;
+      font-size: $font-size-h3;
+      font-weight: 400;
+      color: $brand-second;
+      margin: 0 0 0.607em;
+      small {
+        font-size: 1em;
+        text-transform: none;
+        font-weight: 400;
+      }
+    }
+  }
+  /*.close {
+    opacity: 0.5;
+    &, &:hover {
+      color: $brand-primary;
+    }
+    &:hover {
+      opacity: 1;
+    }
+  }*/
+}
+
+body.entrepreneur .booked-modal .booked-scrollable p.booked-title-bar {
+  background: transparent;
+}
+
+body .booked-form .field {
+  margin: $margin 0;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+body .booked-form .cf-block {
+  margin: 0;
+  .field {
+    margin: 0;
+  }
+}
+
+body .booked-modal .bm-overlay {
+  background: rgba(35, 41, 46, 0.5);
+}
+
+body.entrepreneur .booked-modal .bm-window p i.fa {
+  color: $brand-second;
+}

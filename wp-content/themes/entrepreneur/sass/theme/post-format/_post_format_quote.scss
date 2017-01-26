@@ -1,0 +1,16 @@
+.format-quote {
+  .entry-content > blockquote {
+    margin-top: 0;
+  }
+}
+blockquote.post-format-quote{
+  background: transparent;
+  font-size: 1em;
+  padding: 1.188em 1.750em 0;
+  &:before{
+    margin-bottom: 0.109em;
+  }
+  cite{
+    font-size: 1.500em;
+  }
+}

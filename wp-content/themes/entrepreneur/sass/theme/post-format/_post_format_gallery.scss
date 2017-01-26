@@ -1,0 +1,37 @@
+
+.gallery-12,
+.gallery-6,
+.gallery-4 {
+  display: inline-block;
+  vertical-align: middle;
+  a {
+    padding: 0 0.375em 0;
+    display: block;
+  }
+}
+
+.gallery-6 + .gallery-12 a {
+  padding-top: 0.750em
+}
+
+.gallery-4 {
+  max-width: 33.333333%;
+}
+
+.gallery-6 {
+  max-width: 50%;
+}
+
+.gallery-12 {
+  width: 100%;
+}
+
+.format-gallery .entry-thumbnail.entry-thumbnail-gallery {
+  .gallery-row {
+    margin: 0 -0.375em;
+    img{
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}

@@ -1,0 +1,162 @@
+@import "rate";
+
+.comment-form-rating {
+  select, .customSelect {
+    display: none !important;
+  }
+}
+
+.panel {
+  margin-bottom: $margin;
+  @include box-shadow(none);
+}
+
+.single-product.single .main-container {
+  padding-bottom: 5.000em;
+}
+
+table.shop_attributes {
+  p {
+    margin: 0;
+  }
+}
+
+.single-product {
+  .product_title.entry-title {
+    margin-top: 0;
+  }
+  .cart {
+    margin-bottom: $margin;
+  }
+  .images {
+    padding-right: $margin;
+    margin-bottom: $margin;
+    width: 50%;
+    float: left;
+    .thumbnails {
+      margin: 0 -0.313em;
+      a {
+        display: block;
+        padding: 0 0.313em;
+        width: 33.33%;
+        float: left;
+      }
+    }
+  }
+  .woocommerce-product-rating,
+  .price,
+  .entry-summary {
+    margin-bottom: $margin;
+  }
+  .quantity {
+    display: inline-block;
+    margin-right: 0.938em;
+  }
+  .product_meta {
+    .sku_wrapper,
+    .tagged_as,
+    .posted_in {
+      display: block;
+    }
+    a {
+      text-decoration: underline;
+    }
+  }
+  ol.commentlist {
+    li {
+      background: $gray;
+      padding: 0;
+      margin: 0 0 0.938em;
+      list-style: none;
+    }
+    time {
+      color: $brand-second;
+      margin: 0;
+    }
+    .avatar {
+      float: left;
+      margin-right: 1.250em;
+    }
+    .star-rating {
+      margin: 0.063em 1em 0 0;
+    }
+    .meta {
+      margin-bottom: 1.125em;
+    }
+    .description {
+      overflow: hidden;
+    }
+  }
+  .comment-respond {
+    padding: 0;
+    label {
+      display: block;
+      margin: 0 0 0.313em;
+    }
+  }
+  .related.products,
+  .upsells.products {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.woocommerce.single-product .product > span.onsale {
+  left: 0.938em;
+}
+
+.commentlist {
+  padding-left: 0;
+}
+
+.site-main .quantity .qty {
+  width: 102px;
+}
+
+.woocommerce-tabs {
+  padding: 0 0 1.375em;
+  clear: both;
+
+}
+
+.wc-tabs {
+  margin: 0;
+  padding: 0;
+  li {
+
+    padding-right: 1.875em;
+    display: table-cell;
+    a {
+      display: block;
+      padding: 0.208em 0;
+      font-size: 1.500em;
+      min-width: 170px;
+      font-weight: 400;
+      color: $brand-second;
+      border-bottom: 2px solid;
+      &:hover,&:focus{
+        text-decoration: none;
+      }
+    }
+    &.active a {
+      color: $brand-primary;
+      border-color: $brand-primary;
+    }
+  }
+}
+
+.wc-tab {
+  padding: 0.875em 2.375em;
+  margin-top: 0.625em;
+  background-color: $gray ;
+  h2 {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .single_add_to_cart_button {
+    display: block;
+    margin-top: 1.500em;
+  }
+}

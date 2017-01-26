@@ -1,0 +1,120 @@
+.services-section {
+  .section-header {
+    display: block;
+  }
+  .section-title {
+    color: #ffffff;
+    text-align: center;
+    margin: 0 0 1.119em;
+  }
+  .section-bg {
+    background: rgba(35, 41, 46, 0.65);
+  }
+  .mp_entrepreneur_widget_services {
+    & + .mp_entrepreneur_widget_services {
+      margin-top: 2.750em;
+    }
+  }
+  .mp_entrepreneur_widget_services:nth-of-type(2n-1) {
+    .services-header {
+      right: 0;
+    }
+    .services-content {
+      float: left;
+      padding-left: 0;
+      padding-right: 15px;
+    }
+    .services-title {
+      text-align: right;
+    }
+  }
+  .section-buttons {
+    text-align: center;
+    display: block;
+    .button {
+      margin-top: 3.3em;
+      min-width: 186px;
+    }
+  }
+}
+
+.mp_entrepreneur_widget_services {
+  tbody {
+    background: #ffffff;
+  }
+  table {
+    margin: 0;
+  }
+  table > thead > tr {
+    background: rgba(35, 41, 46, 0.6);
+  }
+}
+
+.services-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.services-title {
+  color: #ffffff;
+  margin: 0.7em 0;
+}
+
+.services-content {
+  float: right;
+  width: 50%;
+  position: relative;
+  z-index: 1;
+  padding-left: 15px;
+
+}
+
+.services-header {
+  width: 50%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 0;
+  .services-image {
+    margin-right: -15px;
+    margin-left: -15px;
+    height: 100%;
+  }
+  img {
+    min-width: 100%;
+    width: auto;
+  }
+}
+
+@media (max-width: 991px) {
+  .services-header .services-image {
+    text-align: center;
+    margin: 0;
+  }
+  .services-header {
+    width: 100%;
+    position: inherit;
+  }
+  .services-content {
+    float: none;
+    width: 100%;
+    padding-left: 0;
+  }
+  .services-header img {
+    height: auto;
+  }
+  .services-section .mp_entrepreneur_widget_services:nth-of-type(2n-1) .services-content {
+    float: none;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .services-section .mp_entrepreneur_widget_services:nth-of-type(2n-1) .services-title {
+    text-align: left;
+  }
+}
+
+@media (max-width: 767px) {
+  .services-section .mp_entrepreneur_widget_services + .mp_entrepreneur_widget_services {
+    margin-top: 1.5em;
+  }
+}

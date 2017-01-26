@@ -1,0 +1,38 @@
+.news-list {
+  margin-top: 3.000em;
+  .post-entry {
+    margin: 0;
+    text-align: center;
+  }
+  .post-wrapper .entry-title {
+    margin: 0;
+  }
+  .entry-thumbnail-default {
+    padding-bottom: 81%;
+    background: $brand-primary;
+    position: relative;
+    display: block;
+    &:hover {
+      text-decoration: none;
+    }
+    .date-post {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      margin: -0.594em 0 0 0;
+      color: #ffffff;
+      text-align: center;
+
+    }
+
+  }
+}
+
+@media (max-width: 991px) {
+  .news-list {
+    .post-entry + .post-entry {
+      margin-top: 3.000em;
+    }
+  }
+}

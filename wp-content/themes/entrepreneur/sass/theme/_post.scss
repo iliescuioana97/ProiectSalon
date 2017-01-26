@@ -1,0 +1,44 @@
+@import "post_meta";
+@import "post-format/post_format_video";
+@import "post-format/post_format_quote";
+@import "post-format/post_format_gallery";
+
+.post-wrapper {
+  background: #ffffff;
+  border: 1px solid $gray-dark;
+  padding: 2.375em 2.375em 1em;
+  .entry-title {
+    margin: 0.500em 0 0.8em;
+  }
+}
+
+.entry-thumbnail {
+  text-align: center;
+}
+
+.entry-video,
+.entry-thumbnail {
+  margin-bottom: -1px;
+}
+
+.entry-thumbnail-gallery {
+  margin-bottom: -2px;
+}
+
+.entry-video {
+  embed {
+    display: block;
+  }
+}
+
+.entry-title {
+  a {
+    color: inherit;
+  }
+}
+
+@media (max-width: 767px) {
+  .post-wrapper {
+    padding: 1.375em 1.375em 0;
+  }
+}

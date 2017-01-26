@@ -1,0 +1,126 @@
+//
+// Buttons
+// --------------------------------------------------
+
+// Base styles
+// --------------------------------------------------
+button {
+  &,
+  &:active,
+  &.active {
+    &:focus,
+    &.focus {
+      @include tab-focus;
+    }
+  }
+}
+
+input[type="submit"],
+.btn,
+.button {
+  display: inline-block;
+  margin-bottom: 0; // For input.btn
+  font-weight: $btn-font-weight;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  border: 2px solid transparent;
+  white-space: nowrap;
+  @include button-size(0.625em, 1.750em, $font-size-base, $line-height-base, $btn-border-radius-base);
+  @include user-select(none);
+  text-transform: uppercase;
+  color: $btn-default-color;
+  background: $btn-default-bg;
+  @include transition(background 0.3s ease);
+
+  &,
+  &:active,
+  &.active {
+    &:focus,
+    &.focus {
+      @include tab-focus;
+    }
+  }
+
+  &:hover,
+  &:focus,
+  &.focus {
+    color: $btn-default-color;
+    text-decoration: none;
+  }
+  &:hover {
+    background: $brand-second;
+  }
+
+  &:active,
+  &.active {
+    outline: 0;
+    background-image: none;
+    @include box-shadow(none);
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    cursor: $cursor-disabled;
+    @include opacity(.65);
+    @include box-shadow(none);
+  }
+  &.button-size-large {
+    padding: 1.188em 2.500em;
+    font-size: 1em;
+    font-weight: 400;
+  }
+  &.button-white {
+    color: $brand-second;
+    background: transparent;
+    border: 2px solid $brand-second;
+    &:hover,
+    &:focus,
+    &.focus {
+      color: $brand-second;
+      text-decoration: none;
+    }
+    &:hover {
+      color: #ffffff;
+      background: $brand-second;
+    }
+  }
+  // [converter] extracted a& to a.btn
+}
+
+a.btn {
+  &.disabled,
+  fieldset[disabled] & {
+    pointer-events: none; // Future-proof disabling of clicks on `<a>` elements
+  }
+}
+
+// Alternate buttons
+// --------------------------------------------------
+//
+//.btn-default {
+//  @include button-variant($btn-default-color, $btn-default-bg, $btn-default-border);
+//}
+//.btn-primary {
+//  @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+//}
+//// Success appears as green
+//.btn-success {
+//  @include button-variant($btn-success-color, $btn-success-bg, $btn-success-border);
+//}
+//// Info appears as blue-green
+//.btn-info {
+//  @include button-variant($btn-info-color, $btn-info-bg, $btn-info-border);
+//}
+//// Warning appears as orange
+//.btn-warning {
+//  @include button-variant($btn-warning-color, $btn-warning-bg, $btn-warning-border);
+//}
+//// Danger and error appear as red
+//.btn-danger {
+//  @include button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border);
+//}
+
+

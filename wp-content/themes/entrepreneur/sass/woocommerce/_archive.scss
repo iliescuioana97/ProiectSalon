@@ -1,0 +1,77 @@
+.breadcrumb {
+  padding: 0;
+  margin-bottom: $margin;
+  background-color: transparent;
+}
+
+.woocommerce {
+  .woocommerce-ordering {
+    margin: 0.375em 0 2.938em;
+    float: right;
+    width: 270px;
+    max-width: 100%;
+    span.customSelect {
+      width: 100%;
+    }
+  }
+  .woocommerce-result-count {
+    margin: 0.875em 0 1.500em;
+    float: left;
+  }
+
+}
+
+.woocommerce-pagination {
+  padding: 2.375em 2.375em 1.938em;
+  overflow: hidden;
+  border: 1px solid $gray-dark;
+  margin: 4.000em 0;
+  text-transform: uppercase;
+  li {
+    list-style: none;
+    float: left;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  a,
+  span {
+    display: block;
+    padding: 0.615em 1.231em;
+    margin: 0 0.308em 0.615em 0;
+    font-size: 0.813em;
+    border: 2px solid;
+    color: inherit;
+    &.dots {
+      border: 2px solid transparent;
+      padding: 0.615em;
+    }
+  }
+  a:hover,
+  span,
+  a.page-numbers:hover,
+  .page-numbers.current {
+    color: #ffffff;
+    background: $brand-primary;
+    border: 2px solid $brand-primary;
+
+  }
+  a {
+    text-decoration: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .woocommerce .woocommerce-ordering {
+    float: none;
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .woocommerce-pagination {
+    margin: 0 0 3.000em 0;
+    padding: 1.375em 1.375em 0.938em;
+  }
+}

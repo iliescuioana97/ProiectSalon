@@ -1,0 +1,15 @@
+.entry-header .entry-meta {
+  @include meta-style();
+  .last,
+  a[rel="author"],
+  .date-post {
+    margin-right: 1.5em;
+  }
+}
+
+a.fa.fa-pencil.post-edit-link:hover {
+  text-decoration: none;
+  span {
+    text-decoration: underline;
+  }
+}

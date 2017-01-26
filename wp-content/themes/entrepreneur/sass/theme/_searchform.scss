@@ -1,0 +1,15 @@
+.search-form{
+    position:relative;
+    button{
+        position: absolute;      
+        top:0;
+        right:0;
+        color:inherit;
+        border:0px solid;
+        padding: 0.875em 1.250em;
+        min-height: 1em;
+        &,&:hover,&:focus{
+            background: transparent;
+        }
+    }
+}

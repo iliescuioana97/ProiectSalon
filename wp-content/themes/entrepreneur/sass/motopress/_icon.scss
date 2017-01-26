@@ -1,0 +1,35 @@
+.mp-theme-icon-brand ,
+.motopress-ce-icon-obj.mp-theme-icon-bg-brand .motopress-ce-icon-preview{
+  color: $brand-primary;
+}
+.mp-theme-icon-white{
+    color:#ffffff;    
+}
+ 
+.motopress-ce-icon-obj.mp-theme-icon-bg-brand.motopress-ce-icon-shape-rounded .motopress-ce-icon-bg,
+.motopress-ce-icon-obj.mp-theme-icon-bg-brand.motopress-ce-icon-shape-square .motopress-ce-icon-bg,
+.motopress-ce-icon-obj.mp-theme-icon-bg-brand.motopress-ce-icon-shape-circle .motopress-ce-icon-bg{
+    background: $brand-primary;
+    .motopress-ce-icon-preview{
+    color:#ffffff;
+}
+}
+
+.motopress-service-box-obj.motopress-service-box-brand .motopress-service-box-icon-holder-rounded,
+.motopress-service-box-obj.motopress-service-box-brand .motopress-service-box-icon-holder-square,
+.motopress-service-box-obj.motopress-service-box-brand .motopress-service-box-icon-holder-circle{
+    background: $brand-primary;
+    .mp-theme-icon-brand{
+        color:#ffffff;
+    }
+}
+.motopress-ce-icon-obj.mp-theme-icon-bg-brand.motopress-ce-icon-shape-outline-rounded,
+.motopress-ce-icon-obj.mp-theme-icon-bg-brand.motopress-ce-icon-shape-outline-circle,
+.motopress-ce-icon-obj.mp-theme-icon-bg-brand.motopress-ce-icon-shape-outline-square{
+     .motopress-ce-icon-bg{
+        border-color: $brand-primary;
+        .motopress-ce-icon-preview{
+            color: $brand-primary;
+        }
+    }
+}

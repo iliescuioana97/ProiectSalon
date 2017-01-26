@@ -1,0 +1,14 @@
+.price {    
+    margin-bottom: 1.313em;
+    display: block;
+    del {
+        margin-right: 0.750em;
+        color:$text-color;
+    }
+    &>.amount,
+    ins{
+        font-size: 1.500em;
+        text-decoration: none;
+    }
+
+}
