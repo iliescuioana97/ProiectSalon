@@ -13,11 +13,13 @@ function InstallScript() {
 add_action('admin_menu','ss_add_pages');
 
 function ss_add_pages(){
-    add_menu_page('Staff & Services', 'Staff & Services', 10, 'menu_Staff&Services', 'display_plugin_descrip_page');
+    add_menu_page('Staff & Services', 'Staff & Services', 'Subscriber', 'menu_Staff&Services', 'display_plugin_descrip_page');
     add_submenu_page('menu_Staff&Services', 'Services', 'Services', 10, 'service', 'display_services_page');
     add_submenu_page('menu_Staff&Services', 'Staff', 'Staff', 10, 'staff', 'display_staff_page');
 
-    //service page
+    $SubMenu5 = add_submenu_page('', 'Manage Service', '', 'administrator', 'manage-service', 'display_manage_service_page');
+    
+//service page
 function display_services_page() {
     require_once("menu-pages/service.php");
 }

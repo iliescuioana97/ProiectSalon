@@ -50,7 +50,6 @@ if (!current_user_can('manage_options')) {
                 </tr>
                 <tr>
                     <th><strong><?php _e("Name", "appointzilla"); ?></strong></th>
-                    <th><strong><?php _e("Description", "appointzilla"); ?></strong></th>
                    
                 </tr>
             </thead>
@@ -65,8 +64,6 @@ if (!current_user_can('manage_options')) {
                     ?>
                     <tr class="odd" style="border-bottom:1px;">
                         <td><em><?php echo ucwords($Service->name); ?></em></td>
-                        <td> <em><?php echo ucfirst($Service->desc); ?></em> </td>
-                       
                     </tr>
                 <?php } ?>
                 <tr>
@@ -91,7 +88,7 @@ if (!current_user_can('manage_options')) {
                 <?php
                 global $wpdb;
                 //get all category list
-                $ServiceTable = $wpdb->prefix . "ap_services";
+                $ServiceTable = $wpdb->prefix . "services";
                 $Services = $wpdb->get_results($wpdb->prepare("SELECT * FROM `$ServiceTable` where id > %d", null));
                 foreach ($Services as $Service) {
                     ?>
