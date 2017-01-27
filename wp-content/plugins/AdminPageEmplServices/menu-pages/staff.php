@@ -1,6 +1,5 @@
 <?php
-
-/* 
+/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -40,17 +39,17 @@ if (!current_user_can('manage_options')) {
                     <th id="yw7_c1" colspan="3">
                         <!--- header rename and delete button right box-->
                         <div align="right">
-                            <?php if ($GroupName->id == '1')  ?>
+                            <?php if ($GroupName->id == '1') { ?>
                             <a rel="tooltip" href="#" data-placement="left" class="btn btn-success btn-small" id="<?php echo $GroupName->id; ?>" onclick="editgruop('<?php echo $GroupName->id; ?>')" title="<?php _e("Rename Category", "appointzilla"); ?>"><?php _e("Rename", "appointzilla"); ?></a>
-                            <?php if ($GroupName->id != '1') { ?>
-                                | <a rel="tooltip" href="?page=staff&gid=<?php echo $GroupName->id; ?>" class="btn btn-danger btn-small" onclick="return confirm('<?php _e("Do you want to delete this Staff member?", "appointzilla"); ?>')" title="<?php _e("Delete", "appointzilla"); ?>"><?php _e("Delete", "appointzilla"); ?></a>
-                            <?php } ?>
+                            <?php} if ($GroupName->id != '1') { ?>
+                                   | <a rel="tooltip" href="?page=staff&sid=<?php echo $GroupName->id; ?>" class="btn btn-danger btn-small" onclick="return confirm('<?php _e("Do you want to delete this Staff member?", "appointzilla"); ?>')" title="<?php _e("Delete", "appointzilla"); ?>"><?php _e("Delete", "appointzilla"); ?></a>
+                                <?php } ?>
                         </div>
                     </th>
                 </tr>
                 <tr>
                     <th><strong><?php _e("Name", "appointzilla"); ?></strong></th>
-                   
+
                 </tr>
             </thead>
             <tbody>
@@ -68,7 +67,7 @@ if (!current_user_can('manage_options')) {
                 <?php } ?>
                 <tr>
                     <td colspan="6">
-                        <a href="?page=manage-staff&gid=<?php echo $GroupName->id; ?>" rel="tooltip" title="<?php _e("Assign new service to this staff member", "appointzilla"); ?>"><?php _e("+ Assign new service to this staff member", "appointzilla"); ?></a>
+                        <a href="?page=manage-staff&sid=<?php echo $GroupName->id; ?>" rel="tooltip" title="<?php _e("Assign new service to this staff member", "appointzilla"); ?>"><?php _e("+ Assign new service to this staff member", "appointzilla"); ?></a>
                     </td>
                 </tr>
             </tbody>
@@ -84,7 +83,7 @@ if (!current_user_can('manage_options')) {
             <?php wp_nonce_field('appointment_add_cat_nonce_check', 'appointment_add_cat_nonce_check'); ?>
             <?php _e("Staff member name ", "appointzilla"); ?>: <input type="text" id="gruopname" name="gruopname" class="inputheight" />
             <br>
-            <form method="post" style="display:block">
+           
                 <?php
                 global $wpdb;
                 //get all category list
@@ -92,11 +91,11 @@ if (!current_user_can('manage_options')) {
                 $Services = $wpdb->get_results($wpdb->prepare("SELECT * FROM `$ServiceTable` where id > %d", null));
                 foreach ($Services as $Service) {
                     ?>
-                   <div style="display:block">
+                    <div style="display:block">
                         <input style="display: inline-block" id="radioboxes" type="checkbox" name="options[]" value="<?php echo ucwords($Service->id); ?>" />
                         <label style="display: inline-block"><?php echo ucwords($Service->name); ?></label> <?php } ?>
                 </div>
-            </form>
+            
             <br>
             <button style="margin-bottom:10px;" id="CreateGruop2" type="submit" class="btn btn-small btn-success" name="CreateGruop"><i class="icon-ok icon-white"></i> <?php _e("Create STAFF member", "appointzilla"); ?></button>
             <button style="margin-bottom:10px;" id="CancelGruop2" type="button" class="btn btn-small btn-danger" name="CancelGruop" onclick="cancelgrup();"><i class="icon-remove icon-white"></i> <?php _e("Cancel", "appointzilla"); ?></button>
@@ -127,16 +126,16 @@ if (!current_user_can('manage_options')) {
     if (isset($_POST['CreateGruop'])) {
 
         $groupename = sanitize_text_field($_POST['gruopname']);
-        $options =$_POST['options'];
+        $options = $_POST['options'];
 
         $wpdb->query($wpdb->prepare("INSERT INTO `$StaffTable` ( `name` ) VALUES (%s);
         ", $groupename));
-         $StaffId= $wpdb->get_row($wpdb->prepare("SELECT `id` FROM `$StaffTable` WHERE `name` = %s", $groupename), OBJECT);
+        $StaffId = $wpdb->get_row($wpdb->prepare("SELECT `id` FROM `$StaffTable` WHERE `name` = %s", $groupename), OBJECT);
         foreach ($options as $o) {
             $wpdb->query($wpdb->prepare("INSERT INTO `$StaffServiceRel` ( `service_id`, `staff_id` ) VALUES (%d, %d);
         ", array($o, $StaffId->id)));
         }
-         echo "<script>alert('" . __('Staff member successfully added.', 'appointzilla') ."')</script>";
+        echo "<script>alert('" . __('Staff member successfully added.', 'appointzilla') . "')</script>";
         echo "<script>location.href='?page=staff';</script>";
     }
 
@@ -158,8 +157,8 @@ if (!current_user_can('manage_options')) {
     }
 
     // Delete service category
-    if (isset($_GET['gid'])) {
-        $DeleteId = intval($_GET['gid']);
+    if (isset($_GET['sid'])) {
+        $DeleteId = intval($_GET['sid']);
         $wpdb->query($wpdb->prepare("DELETE FROM `$StaffTable` WHERE `id` = %s;", $DeleteId));
 
         //update all service category id

@@ -1,35 +1,101 @@
-<?php ?>
-
-/* 
+<?php
+/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
 
+// Exit if accessed directly.
+if (!defined('ABSPATH')) {
+    exit;
+}
 
-<div class="bs-docs-example tooltip-demo" style="background-color: #FFFFFF;">
-    <div style="background:#C3D9FF; margin-bottom:10px; padding-left:10px;"><h3><?php _e("Employees", "appointzilla"); ?></h3></div>
-<?php
-    global $wpdb;
-    if(isset($_GET['sid'])) {
-        $sid = intval( $_GET['sid'] );
+global $wpdb;
+if (isset($_GET['sid'])) {
+    $sid = intval($_GET['sid']);
+    $StaffTable = $wpdb->prefix . "staff";
+    $Staff = $wpdb->get_row($wpdb->prepare("SELECT * FROM `$StaffTable` WHERE `id` = %s", $sid));
+}
+?>    
+<div id="gruopnamebox">
+    <p><?php echo $Staff->name; ?><p>
+
+        <?php
+        global $wpdb;
+        //get all category list
         $ServiceTable = $wpdb->prefix . "services";
-        $ServiceDetails = $wpdb->get_row($wpdb->prepare("SELECT * FROM `$ServiceTable` WHERE `id` =%s",$sid));
-        
+        $StaffServTable = $wpdb->prefix . "services_staff";
 
-// update service category
-    if (isset($_POST['editgruop'])) {
-        $update_id = intval($_POST['editgruop']);
-        $update_name = sanitize_text_field($_POST['editgruopname']);
-        $tt = !is_numeric($update_name);
-        if ($update_name) {
-            if (!is_numeric($update_name)) {
-                $wpdb->query($wpdb->prepare("UPDATE `$StaffTable` SET `name` = '$update_name' WHERE `id` =%s;", $update_id));
-                echo "<script>location.href = '?page=staff';</script>";
-            } else {
-                echo "<script>alert('" . __("Invalid staff name.", "appointzilla") . "');</script>";
+        $Services = $wpdb->get_results($wpdb->prepare("SELECT * FROM `$ServiceTable` where id > %d", null));
+        $SelectedServices = $wpdb->get_results($wpdb->prepare("SELECT service_id FROM `$StaffServTable` where staff_id = %d", $Staff->id));
+//        var_dump($SelectedServices);die;
+        $NonSelectedServices = $wpdb->get_results($wpdb->prepare("SELECT service_id FROM `$StaffServTable` where staff_id != %d", $Staff->id));
+        ?>
+
+    <form method="post">
+        <?php wp_nonce_field(); ?>
+            <?php _e("Staff member name ", "appointzilla"); ?>: 
+            <!--<input type="HIDDEN" id="gruopname" name="gruopname" class="inputheight" />-->
+            
+        <?php
+        foreach ($Services as $Service) {
+            $S = 0;
+            foreach ($SelectedServices as $SelectedService) {
+                if ($Service->id === $SelectedService->service_id) {
+                    $S = $SelectedService->service_id;
+                }
             }
-        } else {
-            echo "<script>alert('" . __("Category name cannot be blank.", "appointzilla") . "');</script>";
-        }
+            ?>
+            <div style="display:block">
+                <label style="display: inline-block">
+                <input type="checkbox" name="options[]" value="<?php echo $Service->name; ?>" 
+                           <?php echo $S > 0 ? "checked" : ''; ?> />
+                <?php
+                       echo $Service->name;
+                   ?></label>
+            </div>
+            <?php }
+        ?>
+
+        <br>
+        <button style="margin-bottom:10px;" id="CreateGruop" type="submit" class="btn btn-small btn-success" name="CreateGruop"><i class="icon-ok icon-white"></i> <?php _e("Create STAFF member", "appointzilla"); ?></button>
+
+    </form>
+
+</div>
+
+
+
+<?php
+global $wpdb;
+$StaffServiceRel = $wpdb->prefix . "services_staff";
+$StaffTable = $wpdb->prefix . "staff";
+$ServiceTable = $wpdb->prefix . "services";
+if (isset($_POST['CreateGruop'])) {
+
+    $options = $_POST['options'];
+
+    foreach ($SelectedServices as $SelectedService) {
+        $wpdb->query($wpdb->prepare("DELETE FROM `$StaffServiceRel` ( `service_id`, `staff_id` ) VALUES (%d, %d) WHERE staff_id = %d;
+        ", array($o, $StaffId->id), $Staff->id));
     }
+
+    foreach ($options as $o) {
+        $wpdb->query($wpdb->prepare("INSERT INTO `$StaffServiceRel` ( `service_id`, `staff_id` ) VALUES (%d, %d);
+        ", array($o, $StaffId->id)));
+        echo "<script>alert('" . __('Staff member successfully added.', 'appointzilla') . "')</script>";
+        echo "<script>location.href='?page=staff';</script>";
+    }
+}
+?>
+<script>
+    jQuery('#CreateGruop2').click(function () {
+        if (!jQuery('#gruopname').val()) {
+            jQuery("#gruopname").after("<span class='apcal-error'><br><strong><?php _e("Name required.", "appointzilla"); ?></strong></span>");
+            return false;
+        } else if (!isNaN(jQuery('#gruopname').val())) {
+            jQuery("#gruopname").after("<span class='apcal-error'><p><strong><?php _e("Invalid name.", "appointzilla"); ?></strong></p></span>");
+            return false;
+        }
+    });
+</script>
