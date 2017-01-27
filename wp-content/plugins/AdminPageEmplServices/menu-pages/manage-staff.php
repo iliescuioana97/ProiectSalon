@@ -48,7 +48,7 @@ if (isset($_GET['sid'])) {
             ?>
             <div style="display:block">
                 <label style="display: inline-block">
-                <input type="checkbox" name="options[]" value="<?php echo $Service->name; ?>" 
+                <input type="checkbox" name="options[]" value="<?php echo $Service->id; ?>" 
                            <?php echo $S > 0 ? "checked" : ''; ?> />
                 <?php
                        echo $Service->name;
@@ -76,16 +76,17 @@ if (isset($_POST['CreateGruop'])) {
     $options = $_POST['options'];
 
     foreach ($SelectedServices as $SelectedService) {
-        $wpdb->query($wpdb->prepare("DELETE FROM `$StaffServiceRel` ( `service_id`, `staff_id` ) VALUES (%d, %d) WHERE staff_id = %d;
-        ", array($o, $StaffId->id), $Staff->id));
+        $wpdb->query($wpdb->prepare("DELETE FROM `$StaffServiceRel` WHERE `staff_id` = %d;
+        ", $sid));
     }
 
-    foreach ($options as $o) {
-        $wpdb->query($wpdb->prepare("INSERT INTO `$StaffServiceRel` ( `service_id`, `staff_id` ) VALUES (%d, %d);
-        ", array($o, $StaffId->id)));
+   foreach ($options as $o) {
+            $wpdb->query($wpdb->prepare("INSERT INTO `$StaffServiceRel` ( `service_id`, `staff_id` ) VALUES (%d, %d);
+        ", array($o, $sid)));
+        }
         echo "<script>alert('" . __('Staff member successfully added.', 'appointzilla') . "')</script>";
         echo "<script>location.href='?page=staff';</script>";
-    }
+    
 }
 ?>
 <script>
