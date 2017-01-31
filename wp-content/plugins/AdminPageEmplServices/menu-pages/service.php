@@ -7,7 +7,7 @@ if ( !current_user_can( 'manage_options' ) )  {
 }
 ?>
 <div class="bs-docs-example tooltip-demo" style="background-color: #FFFFFF;">
-    <div style="background:#C3D9FF; margin-bottom:10px; padding-left:10px;"><h3><?php _e("Services", "appointzilla"); ?></h3></div>
+    <div style="background:#C3D9FF; margin-bottom:10px; padding-left:10px;"><h3><?php _e("Servicii", "appointzilla"); ?></h3></div>
     <?php
     global $wpdb;
     //get all category list
@@ -31,20 +31,19 @@ if ( !current_user_can( 'manage_options' ) )  {
                         <!--- header rename and delete button right box-->
                         <div align="right">
                             <?php if($GroupName->id =='1') ?>
-                                <a rel="tooltip" href="#" data-placement="left" class="btn btn-success btn-small" id="<?php echo $GroupName->id; ?>" onclick="editgruop('<?php echo $GroupName->id; ?>')" title="<?php _e("Rename Category", "appointzilla"); ?>"><?php _e("Rename", "appointzilla"); ?></a>
+                                <a rel="tooltip" href="#" data-placement="left" class="btn btn-success btn-small" id="<?php echo $GroupName->id; ?>" onclick="editgruop('<?php echo $GroupName->id; ?>')" title="<?php _e("Rename Category", "appointzilla"); ?>"><?php _e("Redenumeste", "appointzilla"); ?></a>
                             <?php if($GroupName->id !='1') { ?>
-                                | <a rel="tooltip" href="?page=service&gid=<?php echo $GroupName->id; ?>" class="btn btn-danger btn-small" onclick="return confirm('<?php _e("Do you want to delete this Category?", "appointzilla"); ?>')" title="<?php _e("Delete", "appointzilla"); ?>"><?php _e("Delete", "appointzilla"); ?></a>
+                                | <a rel="tooltip" href="?page=service&gid=<?php echo $GroupName->id; ?>" class="btn btn-danger btn-small" onclick="return confirm('<?php _e("Do you want to delete this Category?", "appointzilla"); ?>')" title="<?php _e("Delete", "appointzilla"); ?>"><?php _e("Sterge", "appointzilla"); ?></a>
                             <?php } ?>
-                        </div>
-                    </th>
+                        </div
                 </tr>
                 <tr>
-                    <th><strong><?php _e("Name"); ?></strong></th>
-                    <th><strong><?php _e("Description"); ?></strong></th>
-                    <th><strong><?php _e("Duration"); ?></strong></th>
+                    <th><strong><?php _e("Nume"); ?></strong></th>
+                    <th><strong><?php _e("Descriere"); ?></strong></th>
+                    <th><strong><?php _e("Durata"); ?></strong></th>
                     <th><strong><?php _e("Cost"); ?></strong></th>
-                    <th><strong><?php _e("Availability"); ?></strong></th>
-                    <th><strong><?php _e("Action"); ?></strong></th>
+                    <th><strong><?php _e("Disponibilitate"); ?></strong></th>
+                    <th><strong><?php _e("Actiune"); ?></strong></th>
                 </tr>
             </thead>
             <tbody>
@@ -69,7 +68,7 @@ if ( !current_user_can( 'manage_options' ) )  {
                 <?php } ?>
                 <tr>
                     <td colspan="6">
-                        <a href="?page=manage-service&gid=<?php echo $GroupName->id; ?>" rel="tooltip" title="<?php _e("Add New Service to this Category", "appointzilla"); ?>"><?php _e("+ Add New Service to this Category", "appointzilla"); ?></a>
+                        <a href="?page=manage-service&gid=<?php echo $GroupName->id; ?>" rel="tooltip" title="<?php _e("Add New Service to this Category", "appointzilla"); ?>"><?php _e("+ Adauga un nou serviciu in aceasta categorie", "appointzilla"); ?></a>
                     </td>
                 </tr>
             </tbody>
@@ -77,14 +76,14 @@ if ( !current_user_can( 'manage_options' ) )  {
     <?php  } ?>
     <!---New category div box--->
     <div id="gruopbuttonbox">
-        <a class="btn btn-info" href="#" rel="tooltip" class="Create Gruop" onclick="creategruopname()"><i class="icon-plus icon-white"></i> <?php _e("Create New Service Category", "appointzilla"); ?></a></u>
+        <a class="btn btn-info" href="#" rel="tooltip" class="Create Gruop" onclick="creategruopname()"><i class="icon-plus icon-white"></i> <?php _e("Creaza o noua categorie de servicii", "appointzilla"); ?></a></u>
     </div>
 
     <div style="display:none;" id="gruopnamebox">
         <form method="post">
             <?php _e("Service Category name ", "appointzilla"); ?>: <input type="text" id="gruopname" name="gruopname" class="inputheight" />
-            <button style="margin-bottom:10px;" id="CreateGruop" type="submit" class="btn btn-small btn-success" name="CreateGruop"><i class="icon-ok icon-white"></i> <?php _e("Create Category", "appointzilla"); ?></button>
-            <button style="margin-bottom:10px;" id="CancelGruop" type="button" class="btn btn-small btn-danger" name="CancelGruop" onclick="cancelgrup();"><i class="icon-remove icon-white"></i> <?php _e("Cancel", "appointzilla"); ?></button>
+            <button style="margin-bottom:10px;" id="CreateGruop" type="submit" class="btn btn-small btn-success" name="CreateGruop"><i class="icon-ok icon-white"></i> <?php _e("Creaza categorie", "appointzilla"); ?></button>
+            <button style="margin-bottom:10px;" id="CancelGruop" type="button" class="btn btn-small btn-danger" name="CancelGruop" onclick="cancelgrup();"><i class="icon-remove icon-white"></i> <?php _e("Anuleaza", "appointzilla"); ?></button>
         </form>
     </div>
     <!---New category div box end --->
@@ -97,7 +96,7 @@ if ( !current_user_can( 'manage_options' ) )  {
         global $wpdb;
         $groupename = sanitize_text_field( $_POST['gruopname'] );
         $wpdb->query($wpdb->prepare("INSERT INTO `$ServiceCategoryTable` ( `name` ) VALUES (%s);",$groupename));
-        echo "<script>alert('" . __('Service category successfully created.', 'appointzilla') ."')</script>";
+        echo "<script>alert('" . __('Categorie de servicii stearsa cu succes.', 'appointzilla') ."')</script>";
         echo "<script>location.href='?page=service';</script>";
     }
 
@@ -111,10 +110,10 @@ if ( !current_user_can( 'manage_options' ) )  {
                 $wpdb->query($wpdb->prepare("UPDATE `$ServiceCategoryTable` SET `name` = '$update_name' WHERE `id` =%s;",$update_id));
                 echo "<script>location.href='?page=service';</script>";
             } else {
-            echo "<script>alert('". __("Invalid category name.", "appointzilla") ."');</script>";
+            echo "<script>alert('". __("Nume de categorie invalid.", "appointzilla") ."');</script>";
             }
         } else {
-            echo "<script>alert('". __("Category name cannot be blank.") ."');</script>";
+            echo "<script>alert('". __("Numele categoriei nu poate fi gol.") ."');</script>";
         }
     }
 
@@ -126,7 +125,7 @@ if ( !current_user_can( 'manage_options' ) )  {
         //update all service category id
         $UpdateServiceSQL = "UPDATE `$ServiceTable` SET `category_id` = '1' WHERE `category_id` ='$DeleteId';";
         $wpdb->query($UpdateServiceSQL); // update category
-        echo "<script>alert('" . __('Service category successfully deleted.', 'appointzilla') ."')</script>";
+        echo "<script>alert('" . __('Categorie de servicii stearsa cu succes.', 'appointzilla') ."')</script>";
         echo "<script>location.href='?page=service';</script>";
     }
 
@@ -134,7 +133,7 @@ if ( !current_user_can( 'manage_options' ) )  {
     if(isset($_GET['sid'])) {
         $DeleteId = intval( $_GET['sid'] );
         $wpdb->query($wpdb->prepare("DELETE FROM `$ServiceTable` WHERE `id` = %s;",$DeleteId));
-        echo "<script>alert('" . __('Service successfully delete.', 'appointzilla') ."')</script>";
+        echo "<script>alert('" . __('Serviciu sters cu succes.', 'appointzilla') ."')</script>";
         echo "<script>location.href='?page=service';</script>";
     }
 ?>

@@ -13,9 +13,8 @@ if (!current_user_can('manage_options')) {
 }
 ?>
 
-<p>text</p>
 <div class="bs-docs-example tooltip-demo" style="background-color: #FFFFFF;">
-    <div style="background:#C3D9FF; margin-bottom:10px; padding-left:10px;"><h3><?php _e("Employees", "appointzilla"); ?></h3></div>
+    <div style="background:#C3D9FF; margin-bottom:10px; padding-left:10px;"><h3><?php _e("Angajati", "appointzilla"); ?></h3></div>
     <?php
     global $wpdb;
     //get all category list
@@ -25,9 +24,9 @@ if (!current_user_can('manage_options')) {
         ?>
         <table class="table">
             <thead>
-                <tr style="background:#C3D9FF; margin-bottom:10px; padding-left:10px;">
+                <tr style="background:#C3D9FF; margin-bottom:10px; padding-left:10px; ">
                     <th colspan="3">
-                        <div id="gruopnamedivbox<?php echo $GroupName->id; ?>"><?php echo ucfirst($GroupName->name); ?></div>
+                        <div id="gruopnamedivbox <?php echo $GroupName->id; ?>"><?php echo ucfirst($GroupName->name); ?></div>
                         <div id="gruopnameedit<?php echo $GroupName->id; ?>" style="display:none; height:25px;">
                             <form method="post">
                                 <input type="text" id="editgruopname" class="inputheight" name="editgruopname" value="<?php echo $GroupName->name; ?>"/>
@@ -35,20 +34,20 @@ if (!current_user_can('manage_options')) {
                                 <button id="editgruopcancel" type="button" class="btn btn-small btn-danger" onclick="canceleditgrup('<?php echo $GroupName->id; ?>')"><i class="icon-remove icon-white"></i> <?php _e("Cancel", "appointzilla"); ?></button>
                             </form>
                         </div>
-                    </th>
+                           </th>
                     <th id="yw7_c1" colspan="3">
                         <!--- header rename and delete button right box-->
-                        <div align="right">
-                            <?php if ($GroupName->id == '1') { ?>
-                            <a rel="tooltip" href="#" data-placement="left" class="btn btn-success btn-small" id="<?php echo $GroupName->id; ?>" onclick="editgruop('<?php echo $GroupName->id; ?>')" title="<?php _e("Rename Category", "appointzilla"); ?>"><?php _e("Rename", "appointzilla"); ?></a>
-                            <?php} if ($GroupName->id != '1') { ?>
-                                   | <a rel="tooltip" href="?page=staff&sid=<?php echo $GroupName->id; ?>" class="btn btn-danger btn-small" onclick="return confirm('<?php _e("Do you want to delete this Staff member?", "appointzilla"); ?>')" title="<?php _e("Delete", "appointzilla"); ?>"><?php _e("Delete", "appointzilla"); ?></a>
-                                <?php } ?>
-                        </div>
+                        <div align="">
+                            <?php if($GroupName->id =='1') ?>
+                                <a rel="tooltip" href="#" data-placement="left" class="btn btn-success btn-small" id="<?php echo $GroupName->id; ?>" onclick="editgruop('<?php echo $GroupName->id; ?>')" title="<?php _e("Rename Category", "appointzilla"); ?>"><?php _e("Redenumeste", "appointzilla"); ?></a>
+                            <?php if($GroupName->id !='1') { ?>
+                                | <a rel="tooltip" href="?page=staff&gid=<?php echo $GroupName->id; ?>" class="btn btn-danger btn-small" onclick="return confirm('<?php _e("Esti sigur ca doresti sa stergi acest angajat?", "appointzilla"); ?>')" title="<?php _e("Delete", "appointzilla"); ?>"><?php _e("Sterge", "appointzilla"); ?></a>
+                            <?php } ?>
+                        </div
                     </th>
                 </tr>
                 <tr>
-                    <th><strong><?php _e("Name", "appointzilla"); ?></strong></th>
+                    <th><strong><?php _e("Nume", "appointzilla"); ?></strong></th>
 
                 </tr>
             </thead>
@@ -67,7 +66,7 @@ if (!current_user_can('manage_options')) {
                 <?php } ?>
                 <tr>
                     <td colspan="6">
-                        <a href="?page=manage-staff&sid=<?php echo $GroupName->id; ?>" rel="tooltip" title="<?php _e("Assign new service to this staff member", "appointzilla"); ?>"><?php _e("+ Assign new service to this staff member", "appointzilla"); ?></a>
+                        <a href="?page=manage-staff&sid=<?php echo $GroupName->id; ?>" rel="tooltip" title="<?php _e("Assign new service to this staff member", "appointzilla"); ?>"><?php _e("+ Adauga un nou serviciu pentru acest angajat", "appointzilla"); ?></a>
                     </td>
                 </tr>
             </tbody>
@@ -75,40 +74,40 @@ if (!current_user_can('manage_options')) {
     <?php } ?>
     <!---New category div box--->
     <div id="gruopbuttonbox">
-        <a class="btn btn-info" href="#" rel="tooltip" class="Create Gruop" onclick="creategruopname()"><i class="icon-plus icon-white"></i> <?php _e("Add new STAFF member", "appointzilla"); ?></a></u>
+        <a class="btn btn-info" href="#" rel="tooltip" class="Create Gruop" onclick="creategruopname()"><i class="icon-plus icon-white"></i> <?php _e("Adauga un nou angajat", "appointzilla"); ?></a></u>
     </div>
 
     <div style="display:none;" id="gruopnamebox">
         <form method="post">
             <?php wp_nonce_field('appointment_add_cat_nonce_check', 'appointment_add_cat_nonce_check'); ?>
-            <?php _e("Staff member name ", "appointzilla"); ?>: <input type="text" id="gruopname" name="gruopname" class="inputheight" />
+            <?php _e("Numele angajatului: ", "appointzilla"); ?>: <input type="text" id="gruopname" name="gruopname" class="inputheight" />
             <br>
-           
-                <?php
-                global $wpdb;
-                //get all category list
-                $ServiceTable = $wpdb->prefix . "services";
-                $Services = $wpdb->get_results($wpdb->prepare("SELECT * FROM `$ServiceTable` where id > %d", null));
-                foreach ($Services as $Service) {
-                    ?>
-                    <div style="display:block">
-                        <input style="display: inline-block" id="radioboxes" type="checkbox" name="options[]" value="<?php echo ucwords($Service->id); ?>" />
-                        <label style="display: inline-block"><?php echo ucwords($Service->name); ?></label> <?php } ?>
-                </div>
-            
+
+            <?php
+            global $wpdb;
+            //get all category list
+            $ServiceTable = $wpdb->prefix . "services";
+            $Services = $wpdb->get_results($wpdb->prepare("SELECT * FROM `$ServiceTable` where id > %d", null));
+            foreach ($Services as $Service) {
+                ?>
+                <div style="display:block">
+                    <input style="display: inline-block" id="radioboxes" type="checkbox" name="options[]" value="<?php echo ucwords($Service->id); ?>" />
+                    <label style="display: inline-block"><?php echo ucwords($Service->name); ?></label> <?php } ?>
+            </div>
+
             <br>
-            <button style="margin-bottom:10px;" id="CreateGruop2" type="submit" class="btn btn-small btn-success" name="CreateGruop"><i class="icon-ok icon-white"></i> <?php _e("Create STAFF member", "appointzilla"); ?></button>
-            <button style="margin-bottom:10px;" id="CancelGruop2" type="button" class="btn btn-small btn-danger" name="CancelGruop" onclick="cancelgrup();"><i class="icon-remove icon-white"></i> <?php _e("Cancel", "appointzilla"); ?></button>
+            <button style="margin-bottom:10px;" id="CreateGruop2" type="submit" class="btn btn-small btn-success" name="CreateGruop"><i class="icon-ok icon-white"></i> <?php _e("Creaza angajat", "appointzilla"); ?></button>
+            <button style="margin-bottom:10px;" id="CancelGruop2" type="button" class="btn btn-small btn-danger" name="CancelGruop" onclick="cancelgrup();"><i class="icon-remove icon-white"></i> <?php _e("Anuleaza", "appointzilla"); ?></button>
 
         </form>
     </div>
     <script>
         jQuery('#CreateGruop2').click(function () {
             if (!jQuery('#gruopname').val()) {
-                jQuery("#gruopname").after("<span class='apcal-error'><br><strong><?php _e("Name required.", "appointzilla"); ?></strong></span>");
+                jQuery("#gruopname").after("<span class='apcal-error'><br><strong><?php _e("Completeaza numele.", "appointzilla"); ?></strong></span>");
                 return false;
             } else if (!isNaN(jQuery('#gruopname').val())) {
-                jQuery("#gruopname").after("<span class='apcal-error'><p><strong><?php _e("Invalid name.", "appointzilla"); ?></strong></p></span>");
+                jQuery("#gruopname").after("<span class='apcal-error'><p><strong><?php _e("Nume invalid.", "appointzilla"); ?></strong></p></span>");
                 return false;
             }
         })
@@ -135,7 +134,7 @@ if (!current_user_can('manage_options')) {
             $wpdb->query($wpdb->prepare("INSERT INTO `$StaffServiceRel` ( `service_id`, `staff_id` ) VALUES (%d, %d);
         ", array($o, $StaffId->id)));
         }
-        echo "<script>alert('" . __('Staff member successfully added.', 'appointzilla') . "')</script>";
+        echo "<script>alert('" . __('Angajat adaugat cu succes.', 'appointzilla') . "')</script>";
         echo "<script>location.href='?page=staff';</script>";
     }
 
@@ -149,30 +148,30 @@ if (!current_user_can('manage_options')) {
                 $wpdb->query($wpdb->prepare("UPDATE `$StaffTable` SET `name` = '$update_name' WHERE `id` =%s;", $update_id));
                 echo "<script>location.href = '?page=staff';</script>";
             } else {
-                echo "<script>alert('" . __("Invalid staff name.", "appointzilla") . "');</script>";
+                echo "<script>alert('" . __("Numele angajatului este invalid.", "appointzilla") . "');</script>";
             }
         } else {
-            echo "<script>alert('" . __("Category name cannot be blank.", "appointzilla") . "');</script>";
+            echo "<script>alert('" . __("Completati numele angajatului.", "appointzilla") . "');</script>";
         }
     }
 
-    // Delete service category
-    if (isset($_GET['sid'])) {
-        $DeleteId = intval($_GET['sid']);
+    // Delete employee
+    if (isset($_GET['gid'])) {
+        $DeleteId = intval($_GET['gid']);
         $wpdb->query($wpdb->prepare("DELETE FROM `$StaffTable` WHERE `id` = %s;", $DeleteId));
 
         //update all service category id
         $UpdateServiceSQL = "UPDATE `$StaffServiceRel` SET `staff_id` = '0' WHERE `staff_id` ='$DeleteId';";
         $wpdb->query($UpdateServiceSQL); // update category
-        echo "<script>alert('" . __('Staff  successfully deleted.', 'appointzilla') . "')</script>";
+        echo "<script>alert('" . __('Angajat sters cu succes.', 'appointzilla') . "')</script>";
         echo "<script>location.href = '?page=staff';</script>";
     }
 
-    // Delete service
+    // Delete employee's services
     if (isset($_GET['sid'])) {
         $DeleteId = intval($_GET['sid']);
         $wpdb->query($wpdb->prepare("DELETE FROM `$StaffServiceRel` WHERE `service_id` = %s;", $DeleteId));
-        echo "<script>alert('" . __('Service successfully delete.', 'appointzilla') . "')</script>";
+        echo "<script>alert('" . __('Serviciu sters cu succes.', 'appointzilla') . "')</script>";
         echo "<script>location.href = '?page=staff';</script>";
     }
     ?>

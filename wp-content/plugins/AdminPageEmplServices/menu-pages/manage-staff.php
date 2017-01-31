@@ -34,7 +34,7 @@ if (isset($_GET['sid'])) {
 
     <form method="post">
         <?php wp_nonce_field(); ?>
-            <?php _e("Staff member name ", "appointzilla"); ?>: 
+
             <!--<input type="HIDDEN" id="gruopname" name="gruopname" class="inputheight" />-->
             
         <?php
@@ -58,7 +58,7 @@ if (isset($_GET['sid'])) {
         ?>
 
         <br>
-        <button style="margin-bottom:10px;" id="CreateGruop" type="submit" class="btn btn-small btn-success" name="CreateGruop"><i class="icon-ok icon-white"></i> <?php _e("Create STAFF member", "appointzilla"); ?></button>
+        <button style="margin-bottom:10px;" id="CreateGruop" type="submit" class="btn btn-small btn-success" name="CreateGruop"><i class="icon-ok icon-white"></i> <?php _e("Creaza angajat", "appointzilla"); ?></button>
 
     </form>
 
@@ -84,7 +84,7 @@ if (isset($_POST['CreateGruop'])) {
             $wpdb->query($wpdb->prepare("INSERT INTO `$StaffServiceRel` ( `service_id`, `staff_id` ) VALUES (%d, %d);
         ", array($o, $sid)));
         }
-        echo "<script>alert('" . __('Staff member successfully added.', 'appointzilla') . "')</script>";
+        echo "<script>alert('" . __('Serviciile angajatului au fost updatate.', 'appointzilla') . "')</script>";
         echo "<script>location.href='?page=staff';</script>";
     
 }
@@ -92,10 +92,10 @@ if (isset($_POST['CreateGruop'])) {
 <script>
     jQuery('#CreateGruop2').click(function () {
         if (!jQuery('#gruopname').val()) {
-            jQuery("#gruopname").after("<span class='apcal-error'><br><strong><?php _e("Name required.", "appointzilla"); ?></strong></span>");
+            jQuery("#gruopname").after("<span class='apcal-error'><br><strong><?php _e("Completati numele.", "appointzilla"); ?></strong></span>");
             return false;
         } else if (!isNaN(jQuery('#gruopname').val())) {
-            jQuery("#gruopname").after("<span class='apcal-error'><p><strong><?php _e("Invalid name.", "appointzilla"); ?></strong></p></span>");
+            jQuery("#gruopname").after("<span class='apcal-error'><p><strong><?php _e("Nume invalid.", "appointzilla"); ?></strong></p></span>");
             return false;
         }
     });
